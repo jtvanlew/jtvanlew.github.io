@@ -1,25 +1,22 @@
----
-layout: default
----
-
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
-
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<!doctype html>
+<html class="no-js" lang="en">
+{% include head.html %}
+{% if site.dropcap %}{% if page.dropcap != false %}<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float: left; font-size: 4.875rem; line-height: 3.750rem; padding-top: 0.375rem; padding-right: 0.375rem; font-family:serif}}</style>{% endif %}{% endif %}
+<body class="post-template">
+{% if page.imagefeature %}{% include headerpostcover.html %}{% else %}{% include headerpostsimple.html %}{% endif %}
+    <article class="notepad-post-content post">
+        <div>
+            <div class="paddings">
+                {{ content }}
+            </div>
+        </div>
+    </article>
+    <div class="cf"></div>
+{% if site.share %}{% include share.html %}{% endif %}
+{% include author.html %}
+<div class="cf"></div>
+{% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>
