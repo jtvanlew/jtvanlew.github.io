@@ -16,7 +16,9 @@ chart: true
 ---
 
 
-I've pretty regularly been pumping out IPAs from my homebrew equipment. It's a style I know, I'm comfortable with, and by god I'm good at 'em. But the world needs balance -- and are not IPAs enjoyed even more when contrasted against other styles occasionally? I think a nice palate cleanser comes in the form of a crisp, clean medium-light amber. I was doing some 'market research' with Ballast Point's Calico amber ale. My initial reaction is probably best described as bitter jealousy. I marvelled at the unfairness that a brewery could not only produce a single beer as pure and delicious as their Sculpin, but that they could do it consistently with other styles like this Calico (and their other IPA, the Big Eye, and... let's face it, probably everything else they make). My second reaction was that I really wanted to copy this beer, so I went online to steal their secrets.
+I've pretty regularly been pumping out IPAs from my homebrew equipment. It's a style I know, I'm comfortable with, and by god I'm good at 'em. But the world needs balance -- and are not IPAs enjoyed even more when contrasted against other styles occasionally? I think a nice palate cleanser comes in the form of a crisp, clean medium-light amber. I was doing some 'market research' with Ballast Point's Calico amber ale. 
+
+My initial reaction is probably best described as bitter jealousy. I marvelled at the unfairness that a brewery could not only produce a single beer as pure and delicious as their Sculpin, but that they could do it consistently with other styles like this Calico (and their other IPA, the Big Eye, and... let's face it, probably everything else they make). My second reaction was that I really wanted to copy this beer, so I went online to steal their secrets.
 
 ![Sculpin IPA]({{ site.url }}/images/beers-sculpin-primary-image.png)
 
