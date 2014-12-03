@@ -1,6 +1,6 @@
-Notepad is a Jekyll theme which is very simple, clean and beautiful. This theme is good for any blog.
+This is my personal website using a Jekyll theme that's, in places, a heavily modified version of the one made by H.M. Faysal: http://hmfaysal.github.io/
   
-Main Features:
+The main features:
 
 * Zurb Foundation 5 – css framework
 * Scss files with settings file
@@ -20,8 +20,4 @@ Credits:
 * Codrops article: [http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/](http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/)
 * There are also tools like jQuery, Modernizr, Normalize.
 
-If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
-
-
-Warm Regards and Stay Creative,  
-Hossain Mohd. Faysal
+hmfaysal did most of the work and I only hacked at it to fit better with my aesthetics. So if you want to credit anyone, credit him.
