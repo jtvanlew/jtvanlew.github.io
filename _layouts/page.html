@@ -14,6 +14,9 @@
         <div class="cf"></div>
     
 </main>
+{% if site.share %}{% include share.html %}{% endif %}
+{% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
+<div class="cf"></div>
 {% include footer.html %}
 {% include scripts.html %}
 </body>
