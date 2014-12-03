@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+draft: true
 mathjax: false
 chart: false
 title: Theme Elements
