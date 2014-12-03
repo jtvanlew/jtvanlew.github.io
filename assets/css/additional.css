@@ -708,7 +708,7 @@ blockquote,blockquote p {
     font-size: 2.5rem!important;
     font-family: serif!important;
     line-height: 1.4!important;
-    text-align: center!important;
+    text-align: left!important;
     max-width: 65.625rem!important;
 }
 
