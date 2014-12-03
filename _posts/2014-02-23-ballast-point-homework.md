@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Ballast Point & open-source brewing"
-description: 
+title: "Ballast Point"
+description: "& open-source brewing"
 headline: 
 modified: 
 category: Brewing
 tags: [homebrew, beer, Ballast Point]
-imagefeature: cover1.jpg
+imagefeature: ballast-point.jpg
 comments: true
 share: true
 mathjax: false
@@ -16,17 +16,11 @@ chart: true
 ---
 
 
+I've pretty regularly been pumping out IPAs from my homebrew equipment. It's a style I know, I'm comfortable with, and by god I'm good at 'em. But the world needs balance -- and are not IPAs enjoyed even more when contrasted against other styles occasionally? I think a nice palate cleanser comes in the form of a crisp, clean medium-light amber. I was doing some 'market research' with Ballast Point's Calico amber ale. My initial reaction is probably best described as bitter jealousy. I marvelled at the unfairness that a brewery could not only produce a single beer as pure and delicious as their Sculpin, but that they could do it consistently with other styles like this Calico (and their other IPA, the Big Eye, and... let's face it, probably everything else they make). My second reaction was that I really wanted to copy this beer, so I went online to steal their secrets.
 
-<div id="wrapper" style="width:100%; text-align:center">
-    <img src="http://jon.vanlew.net/images/ballast-point.jpg" alt="Ballast Point beers" />
-</div>
-<br />
-
-I've pretty regularly been pumping out IPAs from my homebrew equipment. They are styles I know I like and my familiarity with them makes it easy for me to design recipes and, more importantly, pick out the origin of flavors from my ingredients; aka hops. But to balance the constant flux of IPAs and push my palate a little back toward center, I was figuring my next beer should be an amber. To that end I was doing some 'market research' tonight with Ballast Point's Calico amber ale. My initial reaction is probably best described as bitter jealousy at the unfairness that a brewery could not only produce a single beer as pure and delicious as their Sculpin, but that they could do it consistently with other styles like this Calico (and their other IPA, the Big Eye, and... let's face it, probably everything else they make). My second reaction was that I really wanted to copy this beer, so I went online to steal their secrets.
 ![Sculpin IPA]({{ site.url }}/images/beers-sculpin-primary-image.png)
 
-
-But I found instead that Ballast Point has begun this intriguing set of beers I want to share -- The Homework Series. For these beers, they simply take a popular recipe, produce it to their best ability, and then give that recipe right on the label for their drinkers to recreate on their own. The first of the series is this hoppy red ale (this is the largest image I could find in the 30 second google search): 
+But I found instead that Ballast Point has begun this intriguing set of beers I want to share -- The Homework Series. For these beers, they simply take a popular recipe, produce it to their best ability, and then give that recipe right on the label for their drinkers to recreate on their own. The first of the series is this hoppy red ale: 
 
 ![Sculpin IPA](/images/homework-series-1.jpg)
 
