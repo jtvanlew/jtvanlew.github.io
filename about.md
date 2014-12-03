@@ -30,7 +30,7 @@ and this is my personal blog. It currently has {{ site.posts | size }} posts in 
 
 <div class="chart" id="chartdiv" style="width: 100%; height: 500px; margin-bottom: 20px;" ></div>
 
-<div style="float: right"><img src="/images/jtvanlew.jpg" /></div>
+
 
   >I’m just average, common too  
   >I’m just like him, the same as you  
@@ -40,7 +40,7 @@ and this is my personal blog. It currently has {{ site.posts | size }} posts in 
   >It’s just the same as talking to you   
 --Bob Dylan, I Shall Be Free No. 10
 
-
+<div><img src="/images/jtvanlew.jpg" /></div>
 
 Well, that's me?
 
