@@ -6,6 +6,7 @@ tags: [jtvanlew, me]
 imagefeature: fourseasons.jpg
 chart: true
 charttype: pie
+comments: true
 ---
 
 {% assign total_words = 0 %}
