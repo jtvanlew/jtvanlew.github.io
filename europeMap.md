@@ -58,7 +58,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Tel Aviv, Jerusalem, & others",
-                            url: "locales/israel.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157628748155661/"
                         },
                         {
                             svgPath:icon,
@@ -67,7 +67,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Istanbul",
-                            url: "locales/istanbul.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624268458721/"
                         },
                         {
                             svgPath:icon,
@@ -76,7 +76,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Budapest & nearby",
-                            url: "locales/budapest.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393259156/"
                         },
                         {
                             svgPath:icon,
@@ -85,7 +85,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Vienna",
-                            url: "locales/vienna.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393286162/"
                         },
                         {
                             svgPath:icon,
@@ -94,7 +94,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Prague",
-                            url: "locales/prague.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393278580/"
                         },
                         {
                             svgPath:icon,
@@ -103,7 +103,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Berlin",
-                            url: "locales/berlin.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624268412885/"
                         },
                         {
                             svgPath:icon,
@@ -112,7 +112,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Hamburg, Düsseldorf, and Koln",
-                            url: "locales/west_germany.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393248364/"
                         },
                         {
                             svgPath:icon,
@@ -121,7 +121,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Bern (and nearby)",
-                            url: "locales/swiss.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157636528671866/"
                         },
                         {
                             svgPath:icon,
@@ -130,7 +130,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Bruges",
-                            url: "locales/belgium.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393222014/"
                         },
                         {
                             svgPath:icon,
@@ -139,7 +139,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Friesland",
-                            url: "locales/friesland.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624268434665/"
                         },
                         {
                             svgPath:icon,
@@ -148,7 +148,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Amsterdam & nearby",
-                            url: "locales/holland.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624393252748/"
                         },
                         {
                             svgPath:icon,
@@ -157,7 +157,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Barcelona",
-                            url: ""
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157642932794635/"
                         },
                         {
                             svgPath:icon,
@@ -166,7 +166,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Nottingham, Hebden Bridge, & London",
-                            url: "locales/UK.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157624268421549/"
                         },],
             areas:[
                 {id:"IL", 

@@ -65,7 +65,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Chiang Mai, Phuket, & Bangkok",
-                            url: "locales/thailand.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/collections/72157649188613270/"
                         },
                         {
                             svgPath:icon,
@@ -164,7 +164,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Kyoto",
-                            url: "locales/osakaKyoto.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157627504638174/"
                         },
                         {
                             svgPath:icon,
@@ -173,7 +173,7 @@ category: Photography
                             width: 24,
                             height: 24,
                             title: "Osaka",
-                            url: "locales/osakaKyoto.html"
+                            url: "https://www.flickr.com/photos/jtvanlew/sets/72157627504638174/"
                         },
                         {
                             svgPath:icon,
