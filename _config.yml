@@ -150,12 +150,17 @@ prose:
       - name: "comments"
         field:
           element: "checkbox"
-          label: "Comments"
+          label: "Allow comments"
           value: true
       - name: "share"
         field:
           element: "checkbox"
-          label: "Share"
+          label: "Allow shoaring"
+          value: true
+      - name: "chart"
+        field:
+          element: "checkbox"
+          label: "Add post to chart"
           value: true
 
 
