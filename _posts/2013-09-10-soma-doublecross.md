@@ -2,7 +2,6 @@
 layout: post
 title: Soma Double Cross
 tags: [Soma, Double Cross]
-author: jvl
 category: Bicycles
 comments: true
 share: true

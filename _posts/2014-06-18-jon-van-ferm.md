@@ -1,10 +1,9 @@
 ---
 layout: post
-title: The VLFerm Part 1 -  Energy balance
-slug: jon-van-ferm
+title: The VL-Ferm Part 1
+description: energy balance
 tags: homebrew
 category: Brewing
-author: JVL
 lang: en
 mathjax: true
 comments: true
@@ -16,13 +15,15 @@ chart: true
 </div>
 <br />
 
-I saw this immersion chiller for fermenters on kickstarter a while back, the [BrewJacket Immersion](https://www.kickstarter.com/projects/433436998/brewjacket-immersion-lager-beer-without-a-refriger). I think it's actually an excellent solution to the problem of fermenting with not enough space for a dedicated fridge -- but wanting to control temperatures. The problem for me is that they want a $300+ donation in order to get your hands on one. Well, hell, why don't we find out the kinds of heat removal rates they're getting and see if I can't hack one together on my own?
+The problem of tiny apartment space and controlled brewing is a problem I'm intimately familiar with here in LA as a grad student. Having naturally constant temperatures for two weeks *seems* like it wouldn't be a problem here but I always run into gigantic temperature swings whenever I throw the wort into the fermenter. My approach thus far has followed along these steps:
 
-If you look at the info for the BrewJacket Immersion chiller, you see
+1. deal with it.
+
+Which, while beautiful in its simplicity, doesn't always yield the most optimum deliciousness of beer. Then I saw a kickstarter for the [BrewJacket](http://www.brewjacket.com/). I found it to be a pretty simple solution that I could totally steal the design of. I know of some pretty low power peltier coolers that I hadn't ever considered being strong enough for keeping beer cool. I thought I would compare some of the stats given in the BrewJacket kickstarter to see how much power they must be removing with their device. On their page, it said
 
 > Immersion can bring your beer down to 35º F below ambient in a matter of days and hold it there for as long as it is plugged into the wall.
 
-For something to take that long to bring a bucket of beer down to some temperature, it can't be pulling out too many Watts. Let's just assume that the BrewJacket part of the Immersion chiller is providing a completely adiabatic boundary to the walls of the bucket (i.e. the only path heat can leave/enter is through the chiller). So every Joule of energy you pull from the system works to simply drop the temperature. In this system we can simply do a little volumetric energy balance,
+For something to take that long to bring a bucket of beer down to some temperature, it can't be pulling out too many Watts. Let's just assume that the BrewJacket part of the Immersion chiller is providing a completely adiabatic boundary to the walls of the bucket (i.e. the only path heat can leave/enter is through the chiller). So every Joule of energy you pull from the system works to simply drop the temperature. In this system we can then simply do a little volumetric energy balance,
 
 $$
 \begin{equation}
@@ -30,7 +31,7 @@ $$
 \end{equation}
 $$
 
-We can approximate the beer as just water, so we know the density, the specific heat, and of course the volume of liquid:
+Beer is predominately water, so we'll use its material properties:
 
 $$
 \begin{eqnarray}
@@ -49,9 +50,8 @@ Q_\text{out} & = & 7 ~\text{J/s}
 \end{eqnarray}
 $$
 
-That's easy then. Even a simple peltier thermoelectric device can pull out 7 W. Of course, the walls of the fermenter won't be adiabatic. Even if we put in a little 3x design margin on this, a 21 W peltier isn't out of the question.
+Dude. 7 W? That's easy! But, yeah, you're right, the fermenter walls won't be adiabatic so let's add a design margin. Let's say we need 20 W of cooling. I think even cheap-o peltier thermoelectrics can pull 20 W. Since I had precisely such cheap-o peltier, I kinda hacked together some hardware with a flat bar of stainless, an old cpu heat sink, and a peltier sandwiched in the middle. My arduino + a relay got a 20 V power supply onto the thermoelectric. 
 
-So here's how I imagined it. A bar of stainless (or aluminum) with an old cpu heat sink clamped on top of a peltier. The peltier gets fed a 20V power supply (via a relay) controlled by an arduino. The control comes from some temperature measurements (perhaps directly in the beer?). This, in theory, almost entirely matches the construction that the BrewJacket Immersion appears to have. 
+What you see in that image at the top is the first trial run of the whole assembly. I must admit it didn't work that well at first. There was too much stainless steel rod exposed and interacting with the room's air. Some insulation wrapped around that would force more energy interaction with the liquid it's immersed in.
 
-I picked up some parts and began temp. testing the peltier on a bucket of water. So far my data is not beautiful (my power supply was giving a dirty voltage) so I'll stop here and submit another summary of construction and arduino code once things are working a little cleaner.
-
+Anyway. I've dubbed this monstrosity the VL-Ferm 

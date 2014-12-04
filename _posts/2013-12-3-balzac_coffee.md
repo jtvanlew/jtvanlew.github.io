@@ -1,8 +1,7 @@
 ---
 layout: post
 title: The Pleasures and Pains of Coffee
-author: jvl
-category: Personal
+category: Coffee
 tags: [coffee]
 comments: true
 share: true
@@ -11,7 +10,7 @@ imagefeature: camping-coffee.jpg
 
 ---
 
-### Guest post by Honore de Balzac (translated from the French by Robert Onopa)
+This is a beautiful homage to coffee as written by the great Honore de Balzac (translated from the French by Robert Onopa). I am compelled to share it as I sit on the patio with a cup. And here it goes...
 
 Coffee is a great power in my life; I have observed its effects on an epic scale. Coffee roasts your insides. Many people claim coffee inspires them, but, as everybody knows, coffee only makes boring people even more boring. Think about it: although more grocery stores in Paris are staying open until midnight, few writers are actually becoming more spiritual.
 

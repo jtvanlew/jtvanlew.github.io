@@ -2,7 +2,6 @@
 layout: post
 title: Surly Ogre
 tags: [Surly, Ogre]
-author: jvl
 category: Bicycles
 comments: true
 share: true

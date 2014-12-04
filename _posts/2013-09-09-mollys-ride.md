@@ -2,7 +2,6 @@
 layout: post
 title: Molly's new whip
 tags: [flickr, Molly, cycling]
-author: jvl
 category: Bicycles
 comments: true
 share: true
