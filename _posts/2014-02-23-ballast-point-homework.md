@@ -1,20 +1,26 @@
 ---
 layout: post
-title: "Ballast Point"
+title: Ballast Point
 description: "& open-source brewing"
-headline: 
-modified: 
+headline: null
+modified: null
 category: Brewing
-tags: [homebrew, beer, Ballast Point]
-imagefeature: ballast-point.jpg
+tags: 
+  - homebrew
+  - beer
+  - Ballast Point
+  - "homebrew,beer,Ballast Point"
+imagefeature: "ballast-point.jpg"
 comments: true
 share: true
 mathjax: false
 location: "Al Gharaffa, Qatar"
 locationgps: "25.3209031,51.4365133"
 chart: true
+published: true
+categories: 
+  - Brewing
 ---
-
 
 I've pretty regularly been pumping out IPAs from my homebrew equipment. It's a style I know, I'm comfortable with, and by god I'm good at 'em. But the world needs balance -- and are not IPAs enjoyed even more when contrasted against other styles occasionally? I think a nice palate cleanser comes in the form of a crisp, clean medium-light amber. I was doing some 'market research' with Ballast Point's Calico amber ale. 
 
