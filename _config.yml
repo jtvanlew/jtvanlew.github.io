@@ -123,14 +123,14 @@ prose:
               value: personal
             - name: "Engineering"
               value: engineering
-            - name: "Physics"
-              value: physics
-            - name: "Psychology"
-              value: psychology
-            - name: "Interesting"
-              value: interesting
-            - name: "Web-Development"
-              value: webdevelopment
+            - name: "Bicycling"
+              value: bicycling
+            - name: "Coffee"
+              value: coffee
+            - name: "Travel"
+              value: travel
+            - name: "Programming"
+              value: programming
           alterable: true
       - name: "tags"
         field:
@@ -147,16 +147,16 @@ prose:
           element: "checkbox"
           label: "MathJax"
           value: false
-      - name: "featured"
-        field:
-          element: "checkbox"
-          label: "Featured?"
-          value: false
       - name: "comments"
         field:
           element: "checkbox"
           label: "Comments"
-          value: false
+          value: true
+      - name: "share"
+        field:
+          element: "checkbox"
+          label: "Share"
+          value: true
 
 
 include: [".htaccess"]
