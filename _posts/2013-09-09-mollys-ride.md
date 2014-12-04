@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Molly's new whip"
-tags: 
-  - flickr
-  - Molly
-  - cycling
-  - "flickr,Molly,cycling"
+tags: "flickr, Molly, cycling"
 category: Bicycles
 comments: true
 share: true
@@ -13,6 +9,8 @@ chart: true
 published: true
 mathjax: false
 featured: false
+categories: 
+  - Bicycling
 ---
 
 ![9713875778_6cd534da31_z.jpg](/images/post/9713875778_6cd534da31_z.jpg)
