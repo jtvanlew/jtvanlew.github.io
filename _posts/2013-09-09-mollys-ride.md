@@ -1,16 +1,22 @@
 ---
 layout: post
-title: Molly's new whip
-tags: [flickr, Molly, cycling]
+title: "Molly's new whip"
+tags: 
+  - flickr
+  - Molly
+  - cycling
+  - "flickr,Molly,cycling"
 category: Bicycles
 comments: true
 share: true
 chart: true
+published: true
+mathjax: false
+featured: false
 ---
-[flickr:id=9713875778]
 
-Mom got me a bitchin, heavy-duty Wike trailer for my past birthday. I was afraid Molly might find it a little frightening so I wanted to put her bed into it to help soothe her and get her accustomed to it. But she jumped up onto it before I even had a chance to bribe her with treats.
+![9713875778_6cd534da31_z.jpg](/images/post/9713875778_6cd534da31_z.jpg)
 
-When I get back into town I've got to make it into a covered wagon so it'll be safe to trasnport little Molly around LA.
+Cindy and my Mom got me this awesome heavy-duty Wike trailer for my past birthday. They knew how badly I wanted to tow Molly around -- especially looking forward to the next cicLAvia coming up. 
 
-
+Right when I put it together, I was ready to force Molly onto it. But considering she's afraid of piles of wet cardboard, I was concerned she might find it a little intimidating. I put her bed into it to help soothe her and maybe prevent her from being traumatized by it. The little turd jumped up onto it before I even had a chance to bribe her with treats!
