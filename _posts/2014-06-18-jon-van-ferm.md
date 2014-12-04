@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The VL-Ferm Part 1
+title: "The VL-Ferm Part 1"
 description: energy balance
 tags: homebrew
 category: Brewing
@@ -9,7 +9,11 @@ mathjax: true
 comments: true
 share: true
 chart: true
+published: true
+categories: 
+  - Brewing
 ---
+
 <div id="wrapper" style="width:100%; text-align:center">
     <img src="http://jon.vanlew.net/images/jon-van-ferm.jpg" alt="picture of the fermenter being tested" />
 </div>
@@ -54,4 +58,4 @@ Dude. 7 W? That's easy! But, yeah, you're right, the fermenter walls won't be ad
 
 What you see in that image at the top is the first trial run of the whole assembly. I must admit it didn't work that well at first. There was too much stainless steel rod exposed and interacting with the room's air. Some insulation wrapped around that would force more energy interaction with the liquid it's immersed in.
 
-Anyway. I've dubbed this monstrosity the VL-Ferm 
+Anyway. I've dubbed this monstrosity the VL-Ferm
