@@ -9,58 +9,8 @@ share: true
 category: Brewing
 ---
 
-<!-- Modals -->
-<div id="loadingData" class="reveal-modal small text-center">
-	<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
-</div>
-
-
-<script>
-	document.write('<script src=' +
-	('__proto__' in {} ? '{{ site.url }}/assets/js/vendor/zepto' : '{{ site.url }}/assets/js/vendor/jquery') +
-	'.js><\/script>')
-</script>
-
-
-<script src="{{ site.url }}/assets/js/vendor/xivelyjs-1.0.0.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/foundation.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/follows.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/d3.v2.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/rickshaw.min.js"></script>
-
-
-
-<div id="form" style="background: #F0F0F0; border-bottom: 1px solid #CCC; padding: 25px; padding-bottom: 15px;">
-	<div class="row">
-		<div class="large-5 columns">
-			<div class="row collapse">
-				<div class="small-3 columns">
-					<span class="prefix">API Key</span>
-				</div>
-				<div class="small-9 columns">
-					<input type="text" placeholder="Valid Master API Key" id="apiKeyInput">
-				</div>
-			</div>
-		</div>
-		<div class="large-5 columns">
-			<div class="row collapse">
-				<div class="small-3 columns">
-					<span class="prefix">Feed ID's</span>
-				</div>
-				<div class="small-9 columns">
-					<input type="text" placeholder="Comma separated" id="feedsInput">
-				</div>
-			</div>
-		</div>
-		<div class="large-2 columns">
-			<a id="setFeeds" href="#" data-reveal-id="secondModal" class="secondary button small expand">
-				Visualize &raquo;
-			</a>
-		</div>
-	</div>
-</div>
 <!-- Page Content -->
-<div class="container">
+
 <div id="xivelyContent" style="position: relative;">
 	<div id="welcome">
 		<div class="row">
@@ -242,8 +192,25 @@ category: Brewing
 		    </div>
 		</div>
 	</div>
-</div>
+
 
 	
 
+<!-- Modals -->
+<div id="loadingData" class="reveal-modal small text-center">
+	<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
+</div>
 
+
+<script>
+	document.write('<script src=' +
+	('__proto__' in {} ? '{{ site.url }}/assets/js/vendor/zepto' : '{{ site.url }}/assets/js/vendor/jquery') +
+	'.js><\/script>')
+</script>
+
+
+<script src="{{ site.url }}/assets/js/vendor/xivelyjs-1.0.0.min.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/foundation.min.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/follows.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/d3.v2.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/rickshaw.min.js"></script>
