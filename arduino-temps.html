@@ -1,216 +1,271 @@
----
-layout: page
-permalink: /projects/xively/index.html
-title: "Arduino Temperatures"
-tags:
-chart: true
-comments: true
-share: true
-category: Brewing
----
+<!--
+	Visualising Xively Feeds with D3
+	Prepared by Paul Cheek
+	(c) 2013 LogMeIn, Inc.
+-->
 
-<!-- Page Content -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-<div id="xivelyContent" style="position: relative;">
-	<div id="welcome">
-		<div class="row">
-			<div class="large-1 columns">&nbsp;</div>
-			<div class="large-10 columns text-center">
-				<br/><br/><br/><br/><br/><br/><br/>
-				<h1 class="subheader" style="text-align: center;">Welcome to Xively!</h1>
-				<p>This page is an example of just one of many ways you can visualise your data on Xively.<br/>It was created with open-source tools, and reads data from Xively with the Xively JavaScript library.</p>
-				<p>Read the tutorial <i>(comming soon)</i> on how to make and customise your own.</p>
-			</div>
-			<div class="large-1 columns">&nbsp;</div>
-		</div>
-		<div class="row">
-			<div class="large-12 columns">
-				<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
-				<div class="row">
-					<div class="large-4 columns">
-						<div class="hero panel">
-							<p style="font-size: 14px;">To use this page, enter a Master API Key from your Xively account, and a list of the Feeds that you would like to display, into the forms above. You can view multiple Feeds by separating them with a comma, and select individual channels with an exclamation mark.</p>
-						</div>
-					</div>
-					<div class="large-8 columns">
-						<h4 class="subheader">Examples</h4>
-						<hr/>
-						<div class="row">
-							<div class="large-4 columns">
-								<strong style="text-transform: uppercase;">Multiple Feeds</strong>
-							</div>
-							<div class="large-8 columns">
-								<pre><em>61916,61916</em></pre>
-							</div>
-						</div>
-						<hr/>
-						<div class="row">
-							<div class="large-4 columns">
-								<strong style="text-transform: uppercase;">Individual Channels</strong><br/>
-								<small>separate with exclamation marks</small>
-							</div>
-							<div class="large-8 columns">
-								<pre><em>61916!random5!random3600</em></pre><br/>
-								<pre><em>61916!random5,61916!random3600</em></pre>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
-			</div>
-		</div>
-		<div class="row">
-			<div class="large-2 columns">&nbsp;</div>
-			<div class="large-8 columns">
-				<h5 class="subheader text-center">To begin visualizing data, enter your Xively Master API key above!</h5>
-				<br/><br/><br/><br/><br/><br/><br/>
-			</div>
-			<div class="large-2 columns">&nbsp;</div>
-		</div>
-	</div>
-	<div id="invalidApiKey" class="hidden">
-		<div class="row">
-			<div class="large-2 columns">&nbsp;</div>
-			<div class="large-8 columns">
-				<br/><br/><br/>
-				<h1 class="subheader" style="text-align: center;">Uh oh!</h1>
-				<h2 class="subheader" style="text-align: center;">Your API key is invalid!</h2>
-				<p>Please try again or generate a new key on Xively. It is important to keep in mind that this API key must be a global API key in order to work in this example. Using an application-specific API key will cause this example to malfunction.</p>
+<head>
 
-				<a href="#" data-reveal-id="exampleModal" class="openStart radius secondary button expand">Ready When You Are...</a>
-				<br/><br/><br/>
-			</div>
-			<div class="large-2 columns">&nbsp;</div>
-		</div>
-	</div>
-	<div id="validApiKey" class="hidden">
-		<div class="row">
-			<div class="large-2 columns">&nbsp;</div>
-			<div class="large-8 columns">
-				<br/><br/><br/>
-				<br/><br/><br/>
-				<h1 class="subheader" style="text-align: center;">Connected to Xively!</h1>
-				<h5 class="subheader text-center">To begin visualizing data, enter your Xively feed information above...</h5>
-			</div>
-			<div class="large-2 columns">&nbsp;</div>
-		</div>
-		<div class="row">
-			<div class="large-12 columns">
-				<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
-				<div class="row">
-					<div class="large-4 columns">
-						<div class="hero panel">
-							<p style="font-size: 14px;">To use this page, enter a Master API Key from your Xively account, and a list of the Feeds that you would like to display, into the forms above. You can view multiple Feeds by separating them with a comma, and select individual channels with an exclamation mark.</p>
-						</div>
-					</div>
-					<div class="large-8 columns">
-						<h4 class="subheader">Examples</h4>
-						<hr/>
-						<div class="row">
-							<div class="large-4 columns">
-								<strong style="text-transform: uppercase;">Multiple Feeds</strong>
-							</div>
-							<div class="large-8 columns">
-								<pre><em>61916,61916</em></pre>
-							</div>
-						</div>
-						<hr/>
-						<div class="row">
-							<div class="large-4 columns">
-								<strong style="text-transform: uppercase;">Individual Channels</strong><br/>
-								<small>separate with exclamation marks</small>
-							</div>
-							<div class="large-8 columns">
-								<pre><em>61916!random5!random3600</em></pre><br/>
-								<pre><em>61916!random5,61916!random3600</em></pre>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br/><br/><br/><br/>
-				<br/><br/><br/><br/>
-				<br/><br/><br/><br/>
-			</div>
-		</div>
-	</div>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>jtvanlew xively demo</title>
 	
-	<div id="feeds">
-		<div class="feed hidden" id="exampleFeedNotFound" style="line-height: 25px; padding-top: 25px;">
-			<div class="row title">
-				<div class="large-12 columns">
-					<h2 class="subheader value">Loading Feed Data...</h2>
+	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
+	<link type="text/css" rel="stylesheet" href="css/foundation.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/rickshaw.min.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" type="text/css" media="all" />
+	
+	<link rel="stylesheet" href="http://jon.vanlew.net/theme/css/bootstrap.min.css" type="text/css">
+	<link href="http://jon.vanlew.net/theme/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://jon.vanlew.net/theme/css/pygments/monokai.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://jon.vanlew.net/theme/css/style.css" type="text/css">
+	<link rel="stylesheet" href="http://jon.vanlew.net/theme/css/local.css" type="text/css">
+	
 
-					<div class="alert alert-box no-info">
-						Sorry, this feed could not be found.
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="js/custom.modernizr.js"></script>
+	<script src="js/xivelyjs-1.0.0.min.js"></script>
+	<script src="js/d3.v2.js"></script>
+	<script src="js/rickshaw.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Form -->
+	<div id="form" style="background: #F0F0F0; border-bottom: 1px solid #CCC; padding: 25px; padding-bottom: 15px;">
+		<div class="row">
+			<div class="large-5 columns">
+				<div class="row collapse">
+					<div class="small-3 columns">
+						<span class="prefix">API Key</span>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" placeholder="Valid Master API Key" id="apiKeyInput">
 					</div>
 				</div>
+			</div>
+			<div class="large-5 columns">
+				<div class="row collapse">
+					<div class="small-3 columns">
+						<span class="prefix">Feed ID's</span>
+					</div>
+					<div class="small-9 columns">
+						<input type="text" placeholder="Comma separated" id="feedsInput">
+					</div>
+				</div>
+			</div>
+			<div class="large-2 columns">
+				<a id="setFeeds" href="#" data-reveal-id="secondModal" class="secondary button small expand">
+					Visualize &raquo;
+				</a>
 			</div>
 		</div>
-		<div class="feed hidden" id="exampleFeed" style="line-height: 25px; padding-top: 25px;">
-			<div class="row title">
-				<div class="large-12 columns">
-					<h2 class="subheader value">Loading Feed Data...</h2>
+	</div>
+	<!-- Page Content -->
+	<div class="container">
+	<div id="xivelyContent" style="position: relative;">
+		<div id="welcome">
+			<div class="row">
+				<div class="large-1 columns">&nbsp;</div>
+				<div class="large-10 columns text-center">
+					<br/><br/><br/><br/><br/><br/><br/>
+					<h1 class="subheader" style="text-align: center;">Welcome to Xively!</h1>
+					<p>This page is an example of just one of many ways you can visualise your data on Xively.<br/>It was created with open-source tools, and reads data from Xively with the Xively JavaScript library.</p>
+					<p>Read the tutorial <i>(comming soon)</i> on how to make and customise your own.</p>
 				</div>
+				<div class="large-1 columns">&nbsp;</div>
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<div class="button-group" style="float: right;">
-						<a href="#" class="small button secondary duration-hour">6 Hrs</a>
-						<a href="#" class="small button secondary duration-day">Day</a>
-						<a href="#" class="small button secondary duration-week">Week</a>
-						<a href="#" class="small button secondary duration-month">Month</a>
-						<a href="#" class="small button secondary duration-90">90 Days</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-12 columns">
-					<div class="datastreams" style="padding-bottom: 15px;">
-						<div class="datastream hidden">
+					<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
+					<div class="row">
+						<div class="large-4 columns">
+							<div class="hero panel">
+								<p style="font-size: 14px;">To use this page, enter a Master API Key from your Xively account, and a list of the Feeds that you would like to display, into the forms above. You can view multiple Feeds by separating them with a comma, and select individual channels with an exclamation mark.</p>
+							</div>
+						</div>
+						<div class="large-8 columns">
+							<h4 class="subheader">Examples</h4>
 							<hr/>
 							<div class="row">
-								<div class="large-9 columns datastream-name subheader" style="font-size: 24px;">
-									Datastream Name
+								<div class="large-4 columns">
+									<strong style="text-transform: uppercase;">Multiple Feeds</strong>
 								</div>
-								<div class="large-3 columns datastream-value subheader" style="font-size: 24px; text-align: right;">
-									420
+								<div class="large-8 columns">
+									<pre><em>61916,61916</em></pre>
 								</div>
 							</div>
+							<hr/>
 							<div class="row">
-								<div class="large-12 columns">
-									<div class="graphWrapper" style="margin-top: 15px; padding: 10px; text-align: center;">
-										<div class="graph" style="width: 600px; margin: auto;"></div>
-									</div>
-									<div class="slider" style="width: 600px; height: 15px; margin: auto;"></div>
+								<div class="large-4 columns">
+									<strong style="text-transform: uppercase;">Individual Channels</strong><br/>
+									<small>separate with exclamation marks</small>
+								</div>
+								<div class="large-8 columns">
+									<pre><em>61916!random5!random3600</em></pre><br/>
+									<pre><em>61916!random5,61916!random3600</em></pre>
 								</div>
 							</div>
 						</div>
 					</div>
+					<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
 				</div>
-				<hr/>
 			</div>
-		    </div>
+			<div class="row">
+				<div class="large-2 columns">&nbsp;</div>
+				<div class="large-8 columns">
+					<h5 class="subheader text-center">To begin visualizing data, enter your Xively Master API key above!</h5>
+					<br/><br/><br/><br/><br/><br/><br/>
+				</div>
+				<div class="large-2 columns">&nbsp;</div>
+			</div>
+		</div>
+		<div id="invalidApiKey" class="hidden">
+			<div class="row">
+				<div class="large-2 columns">&nbsp;</div>
+				<div class="large-8 columns">
+					<br/><br/><br/>
+					<h1 class="subheader" style="text-align: center;">Uh oh!</h1>
+					<h2 class="subheader" style="text-align: center;">Your API key is invalid!</h2>
+					<p>Please try again or generate a new key on Xively. It is important to keep in mind that this API key must be a global API key in order to work in this example. Using an application-specific API key will cause this example to malfunction.</p>
+
+					<a href="#" data-reveal-id="exampleModal" class="openStart radius secondary button expand">Ready When You Are...</a>
+					<br/><br/><br/>
+				</div>
+				<div class="large-2 columns">&nbsp;</div>
+			</div>
+		</div>
+		<div id="validApiKey" class="hidden">
+			<div class="row">
+				<div class="large-2 columns">&nbsp;</div>
+				<div class="large-8 columns">
+					<br/><br/><br/>
+					<br/><br/><br/>
+					<h1 class="subheader" style="text-align: center;">Connected to Xively!</h1>
+					<h5 class="subheader text-center">To begin visualizing data, enter your Xively feed information above...</h5>
+				</div>
+				<div class="large-2 columns">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<br/><br/><br/><br/><hr/><br/><br/><br/><br/>
+					<div class="row">
+						<div class="large-4 columns">
+							<div class="hero panel">
+								<p style="font-size: 14px;">To use this page, enter a Master API Key from your Xively account, and a list of the Feeds that you would like to display, into the forms above. You can view multiple Feeds by separating them with a comma, and select individual channels with an exclamation mark.</p>
+							</div>
+						</div>
+						<div class="large-8 columns">
+							<h4 class="subheader">Examples</h4>
+							<hr/>
+							<div class="row">
+								<div class="large-4 columns">
+									<strong style="text-transform: uppercase;">Multiple Feeds</strong>
+								</div>
+								<div class="large-8 columns">
+									<pre><em>61916,61916</em></pre>
+								</div>
+							</div>
+							<hr/>
+							<div class="row">
+								<div class="large-4 columns">
+									<strong style="text-transform: uppercase;">Individual Channels</strong><br/>
+									<small>separate with exclamation marks</small>
+								</div>
+								<div class="large-8 columns">
+									<pre><em>61916!random5!random3600</em></pre><br/>
+									<pre><em>61916!random5,61916!random3600</em></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br/><br/><br/><br/>
+					<br/><br/><br/><br/>
+					<br/><br/><br/><br/>
+				</div>
+			</div>
+		</div>
+		
+		<div id="feeds">
+			<div class="feed hidden" id="exampleFeedNotFound" style="line-height: 25px; padding-top: 25px;">
+				<div class="row title">
+					<div class="large-12 columns">
+						<h2 class="subheader value">Loading Feed Data...</h2>
+
+						<div class="alert alert-box no-info">
+							Sorry, this feed could not be found.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="feed hidden" id="exampleFeed" style="line-height: 25px; padding-top: 25px;">
+				<div class="row title">
+					<div class="large-12 columns">
+						<h2 class="subheader value">Loading Feed Data...</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="button-group" style="float: right;">
+							<a href="#" class="small button secondary duration-hour">6 Hrs</a>
+							<a href="#" class="small button secondary duration-day">Day</a>
+							<a href="#" class="small button secondary duration-week">Week</a>
+							<a href="#" class="small button secondary duration-month">Month</a>
+							<a href="#" class="small button secondary duration-90">90 Days</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="datastreams" style="padding-bottom: 15px;">
+							<div class="datastream hidden">
+								<hr/>
+								<div class="row">
+									<div class="large-9 columns datastream-name subheader" style="font-size: 24px;">
+										Datastream Name
+									</div>
+									<div class="large-3 columns datastream-value subheader" style="font-size: 24px; text-align: right;">
+										420
+									</div>
+								</div>
+								<div class="row">
+									<div class="large-12 columns">
+										<div class="graphWrapper" style="margin-top: 15px; padding: 10px; text-align: center;">
+											<div class="graph" style="width: 600px; margin: auto;"></div>
+										</div>
+										<div class="slider" style="width: 600px; height: 15px; margin: auto;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr/>
+				</div>
+			    </div>
+			</div>
 		</div>
 	</div>
 
-
 	
 
-<!-- Modals -->
-<div id="loadingData" class="reveal-modal small text-center">
-	<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
-</div>
+	<!-- Modals -->
+	<div id="loadingData" class="reveal-modal small text-center">
+		<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
+	</div>
 
+	<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/zepto' : 'js/jquery') +
+		'.js><\/script>')
+	</script>
 
-<script>
-	document.write('<script src=' +
-	('__proto__' in {} ? '{{ site.url }}/assets/js/vendor/zepto' : '{{ site.url }}/assets/js/vendor/jquery') +
-	'.js><\/script>')
-</script>
+	<script src="js/foundation.min.js"></script>
+	<script src="follows.js"></script>
 
-
-<script src="{{ site.url }}/assets/js/vendor/xivelyjs-1.0.0.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/foundation.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/follows.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/d3.v2.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/rickshaw.min.js"></script>
+</body>
+</html>
