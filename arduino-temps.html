@@ -8,23 +8,28 @@ comments: true
 share: true
 category: Brewing
 ---
-<!-- <head>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>jtvanlew xively demo</title>
-	
-
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<script src="js/custom.modernizr.js"></script>
+<!-- Modals -->
+<div id="loadingData" class="reveal-modal small text-center">
+	<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
+</div>
 
 
-</head>
-<body> -->
+<script>
+	document.write('<script src=' +
+	('__proto__' in {} ? '{{ site.url }}/assets/js/vendor/zepto' : '{{ site.url }}/assets/js/vendor/jquery') +
+	'.js><\/script>')
+</script>
 
-<!-- Form -->
+
+<script src="{{ site.url }}/assets/js/vendor/xivelyjs-1.0.0.min.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/foundation.min.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/follows.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/d3.v2.js"></script>
+<script src="{{ site.url }}/assets/js/vendor/rickshaw.min.js"></script>
+
+
+
 <div id="form" style="background: #F0F0F0; border-bottom: 1px solid #CCC; padding: 25px; padding-bottom: 15px;">
 	<div class="row">
 		<div class="large-5 columns">
@@ -241,21 +246,4 @@ category: Brewing
 
 	
 
-<!-- Modals -->
-<div id="loadingData" class="reveal-modal small text-center">
-	<br/><br/><h2 class="subheader">Loading...</h2><br/><br/>
-</div>
 
-
-<script>
-	document.write('<script src=' +
-	('__proto__' in {} ? '{{ site.url }}/assets/js/vendor/zepto' : '{{ site.url }}/assets/js/vendor/jquery') +
-	'.js><\/script>')
-</script>
-
-
-<script src="{{ site.url }}/assets/js/vendor/xivelyjs-1.0.0.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/foundation.min.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/follows.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/d3.v2.js"></script>
-<script src="{{ site.url }}/assets/js/vendor/rickshaw.min.js"></script>
