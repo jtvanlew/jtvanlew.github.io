@@ -31,4 +31,5 @@ where I'm calling $T_b$ the wort temperature and $T_c$ the cold bath temperature
 $$
 \begin{equation}
 \cfrac{\mathrm{d}}{\mathrm{dt}}\begin{bmatrix}T_b\\T_c\end{bmatrix} = \begin{bmatrix}-\alpha_b & \alpha_c \\ \alpha_c & -\alpha_c\end{bmatrix}\begin{bmatrix}T_b\\T_c\end{bmatrix}
+\end{equation}
 $$
