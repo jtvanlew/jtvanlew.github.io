@@ -34,7 +34,13 @@ $$
 \end{equation}
 $$
 
-The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are $\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$ and $\bar{\eta}_2 = \begin{bmatrix}1\\-\cfrac{\alpha_c}{\alpha_b}\end{bmatrix}$. 
+The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are
+
+$$\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$$
+
+and 
+
+$$\bar{\eta}_2 = \begin{bmatrix}1\\-\cfrac{\alpha_c}{\alpha_b}\end{bmatrix}$$ 
 
 Thus the general solution is
 
