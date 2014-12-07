@@ -17,7 +17,7 @@ I went looking around for a submersible aquarium pump to run a closed-loop water
 
 ![wort chiller pumping](/images/post/2115697301_ff9c9a3de1.jpg)
 
-Of course I became curious about how effective the cooling would be with different volumes of ice water. 
+Of course I became curious if I could solve for the temperatures of the wort as a function of time -- taking into account that the wort is heating up the chilled water. The curiosity is mostly academic and not really influencing a design or anything. But ... here goes.
 
 # Equations
 In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. I'll assume also that the wort chiller I made is efficient enough to raise the temperature of the chilling water up to the wort  temperature, regardless of the flow rate or chilled temperature. The equations are
@@ -37,7 +37,7 @@ $$
 \end{equation}
 $$
 
-The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are
+where $\alpha_b = \dot{m}/m_b$ and $\alpha_c = \dot{m}/m_c$. The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are
 
 $$\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$$
 
@@ -45,7 +45,7 @@ and
 
 $$\bar{\eta}_2 = \begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}$$ 
 
-where $\alpha_b = \dot{m}/m_b$ and $\alpha_c = \dot{m}/m_c$. Thus the general solution is
+Thus the general solution is
 
 $$
 \begin{equation}
@@ -53,7 +53,7 @@ $$
 \end{equation}
 $$
 
-The initial conditions can be just taken as boiling for the hot bath and freezing for the cold one, $T_{b,i} = 212$ F and $T_{c,i} = 32$ F. The coefficients are then
+The initial conditions can be just taken as boiling for the hot bath and freezing for the cold one. The coefficients are then
 
 $$
 \begin{equation}
