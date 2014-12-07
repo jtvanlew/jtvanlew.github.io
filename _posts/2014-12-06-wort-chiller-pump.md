@@ -17,7 +17,10 @@ I went looking around for a submersible aquarium pump to run a closed-loop water
 
 ![wort chiller pumping](/images/post/2115697301_ff9c9a3de1.jpg)
 
-Of course I became curious about how effective the cooling would be with different volumes of ice water. In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. I'll assume also that the wort chiller I made is efficient enough to raise the temperature of the chilling water up to the wort  temperature, regardless of the flow rate or chilled temperature. The equations are
+Of course I became curious about how effective the cooling would be with different volumes of ice water. 
+
+# Equations
+In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. I'll assume also that the wort chiller I made is efficient enough to raise the temperature of the chilling water up to the wort  temperature, regardless of the flow rate or chilled temperature. The equations are
 
 $$
 \begin{equation}
@@ -68,6 +71,7 @@ T_c(t) = T_{b,i} + \left[-\left(\alpha_c/\alpha_b\right)e^{-(\alpha_b+\alpha_c)t
 \end{equation}
 $$
 
+## Result
 I found a pump on Amazon that was $7 and ran at 80 gal/hr. I'll assume that my wort is about 3 gallons. So I want to compare the temperatures of the two baths as the cold bath volume changes. Like, can 3 gal of frozen water drop 3 gal of boiling water to 80 F? (no) or what size do I need in order to actually hit 80 F? The easiest way to solve this is with some simple scripting.
 
 The code is given in its entirety at the bottom. The plot coming from the code is:
@@ -76,9 +80,12 @@ The code is given in its entirety at the bottom. The plot coming from the code i
 
 The upper lines are the plots of hot water bath temperatures with time, starting with 1 gal, then going 3, 6, 9, 12, and 15 gallons for the cold bath. The lower, dashed lines are the cold baths for the same cold bath volumes.
 
-What the lines show us is that for cold water baths less than 9 gal we'll never hit 80 F before the thermal energy equilibrates between the two water volumes. At 9 gal and above, however, we hit 80 F at earlier times for larger the volumes.
+What the lines show us is that for cold water baths less than 9 gal we'll never hit 80 F before the thermal energy equilibrates between the two water volumes. At 9 gal and above, however, we hit 80 F at earlier times for larger the volumes. 
 
-I wrapped up the equations in some pert little code, reproduced here for prosperity
+Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperatures faster -- but even the slow pump can do it. But it does tell me an important result that if I'm running a closed-loop wort chiller, I'd better be prepared with a much larger volume of cold water than hot water I need to chill. But, more importantly, I had fun practicing my math of solving coupled ODEs.
+
+## Code
+I wrapped up the equations in some pert little code, reproduced here for posterity
 {% highlight py %}
 import numpy as np
 import matplotlib.pyplot as plt
