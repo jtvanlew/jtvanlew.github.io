@@ -30,6 +30,25 @@ where I'm calling $T_b$ the wort temperature and $T_c$ the cold bath temperature
 
 $$
 \begin{equation}
-\cfrac{\mathrm{d}}{\mathrm{dt}}\begin{bmatrix}T_b\\T_c\end{bmatrix} = \begin{bmatrix}-\alpha_b & \alpha_c \\ \alpha_c & -\alpha_c\end{bmatrix}\begin{bmatrix}T_b\\T_c\end{bmatrix}
+\cfrac{\mathrm{d}}{\mathrm{dt}}\begin{bmatrix}T_b\\T_c\end{bmatrix} = \begin{bmatrix}-\alpha_b & \alpha_b \\ \alpha_c & -\alpha_c\end{bmatrix}\begin{bmatrix}T_b\\T_c\end{bmatrix}
+\end{equation}
+$$
+
+The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are $\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$ and $\bar{\eta}_2 = \begin{bmatrix}1\\-\cfrac{\alpha_c}{\alpha_b}\end{bmatrix}$. 
+
+Thus the general solution is
+
+$$
+\begin{equation}
+\begin{bmatrix}T_b\\T_c\end{bmatrix} = C_1\begin{bmatrix}1 & 1 \end{bmatrix} + C_2 e^{-(\alpha_c + \alpha_b)}\begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}
+\end{equation}
+$$
+
+The initial conditions can be just taken as boiling for the hot bath and freezing for the cold one, $T_{b,i} = 212$ F and $T_{c,i} = 32$ F. The coefficients are then
+
+$$
+\begin{equation}
+C_1 = T_{b,i} - \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\\\
+C_2 = \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}
 \end{equation}
 $$
