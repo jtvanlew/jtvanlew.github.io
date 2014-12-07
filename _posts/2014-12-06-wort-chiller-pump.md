@@ -2,10 +2,13 @@
 layout: post
 published: true
 title: Wort chiller pump
-mathjax: false
+mathjax: true
 comments: true
 share: true
 chart: true
+description: "and the art of over-engineering"
+categories: 
+  - Brewing
 ---
 
 At the new apartment, my brewing has gone outdoors to the back patio. The patio drains off onto the cars parked below the patio, so running an open loop of water through my wort chiller isn't an option anymore. Not even to mention the ethics of dumping gallons of water during a drought.
