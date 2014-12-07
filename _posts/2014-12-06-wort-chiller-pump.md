@@ -40,13 +40,13 @@ $$\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$$
 
 and 
 
-$$\bar{\eta}_2 = \begin{bmatrix}1\\-\cfrac{\alpha_c}{\alpha_b}\end{bmatrix}$$ 
+$$\bar{\eta}_2 = \begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}$$ 
 
-Thus the general solution is
+where $\alpha_b = \dot{m}/m_b$ and $\alpha_c = \dot{m}/m_c$. Thus the general solution is
 
 $$
 \begin{equation}
-\begin{bmatrix}T_b\\T_c\end{bmatrix} = C_1\begin{bmatrix}1 & 1 \end{bmatrix} + C_2 e^{-(\alpha_c + \alpha_b)}\begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}
+\begin{bmatrix}T_b\\T_c\end{bmatrix} = C_1\begin{bmatrix}1 \\ 1 \end{bmatrix} + C_2 e^{-(\alpha_c + \alpha_b)t}\begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}
 \end{equation}
 $$
 
@@ -56,5 +56,14 @@ $$
 \begin{equation}
 C_1 = T_{b,i} - \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\\\
 C_2 = \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}
+\end{equation}
+$$
+
+Finally, the solutions, when broken out of vector form, are
+
+$$
+\begin{equation}
+T_b(t) = T_{b,i} - \left[e^{-(\alpha_b+\alpha_c)t}-1\right] \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)
+T_c(t) = T_{b,i} - \left[-\left(\alpha_c/\alpha_b\right)e^{-(\alpha_b+\alpha_c)t}-1\right] \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)
 \end{equation}
 $$
