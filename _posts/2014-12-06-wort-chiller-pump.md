@@ -17,19 +17,23 @@ I went looking around for a submersible aquarium pump to run a closed-loop water
 
 ![wort chiller pumping](/images/post/2115697301_ff9c9a3de1.jpg)
 
-Of course I became curious if I could solve for the temperatures of the wort as a function of time -- taking into account that the wort is heating up the chilled water. The curiosity is mostly academic and not really influencing a design or anything. But ... here goes.
+Of course I became curious about solving the energy balance for the temperatures of the wort as a function of time. It becomes interesting when you consider that the cold water flushes through the hot wort, and then warms up the cold bath as it dumps back into the reservoir. The curiosity is mostly academic and not really influencing a design as I see it. But ... here goes.
 
 # Equations
-In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. I'll assume also that the wort chiller I made is efficient enough to raise the temperature of the chilling water up to the wort  temperature, regardless of the flow rate or chilled temperature. The equations are
+In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. A schematic of the exchange is here:
+
+![wort chiller schematic](/images/post/wort_chiller.png)
+
+For this problem the cold fluid is all at $T_c$ whether its in the bath or in the transfer line. Same goes for the hot wort and hot end of the transfer line. Doing any open, transient energy balance on the two baths yields the simple coupled system of ODEs:
 
 $$
 \begin{equation}
-m_b \cfrac{\mathrm{d}T_b}{\mathrm{dt}} = \dot{m}(T_i-T_b)\\\
-m_c \cfrac{\mathrm{d}T_c}{\mathrm{dt}} = \dot{m}(T_b-T_i)\\\
+m_b \cfrac{\mathrm{d}T_b}{\mathrm{dt}} = \dot{m}(T_c-T_b)\\\
+m_c \cfrac{\mathrm{d}T_c}{\mathrm{dt}} = \dot{m}(T_b-T_c)\\\
 \end{equation}
 $$
 
-where I'm calling $T_b$ the wort temperature and $T_c$ the cold bath temperature, $\dot{m}$ is the mass flow pushed by the pump, and $m_b$ and $m_c$ are the masses of fluid sitting in the hot and cold baths, respectively. I'll solve this by putting it into matrix form,
+Obviously $\dot{m}$ is the mass flow pushed by the pump, and $m_b$ and $m_c$ are the masses of fluid sitting in the hot and cold baths, respectively. I'll solve this by putting it into matrix form,
 
 $$
 \begin{equation}
