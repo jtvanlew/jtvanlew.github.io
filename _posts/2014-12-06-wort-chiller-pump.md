@@ -9,6 +9,7 @@ chart: true
 description: "and the art of over-engineering"
 categories: 
   - Brewing
+tags: "wort chiller, homebrewing, pump"
 ---
 
 At the new apartment, my brewing has gone outdoors to the back patio. The patio drains off onto the cars parked below the patio, so running an open loop of water through my wort chiller isn't an option anymore. Not even to mention the ethics of dumping gallons of water during a drought.
@@ -84,9 +85,17 @@ The code is given in its entirety at the bottom. The plot coming from the code i
 
 The upper lines are the plots of hot water bath temperatures with time, starting with 1 gal, then going 3, 6, 9, 12, and 15 gallons for the cold bath. The lower, dashed lines are the cold baths for the same cold bath volumes.
 
-What the lines show us is that for cold water baths less than 9 gal we'll never hit 80 F before the thermal energy equilibrates between the two water volumes. At 9 gal and above, however, we hit 80 F at earlier times for larger the volumes. 
+What the lines show us is that for cold water baths less than 9 gal we'll never hit 80 F before the thermal energy equilibrates between the two water volumes. At 9 gal and above, however, we logically hit 80 F earlier with larger cold volumes.
 
-Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperatures faster -- but even the slow pump can do it. But it does tell me an important result that if I'm running a closed-loop wort chiller, I'd better be prepared with a much larger volume of cold water than hot water I need to chill. But, more importantly, I had fun practicing my math of solving coupled ODEs.
+If I do it again with a flowrate of $Q = 158$ gph, 
+
+![wort chiller temp plots](/images/post/pump-q158.png)
+
+All that happens is a faster approach to steady state temperature, but it doesn't do anything for the actual steady state value. A careful inspection of Eqs. (5) should have revealed that before we began. But I'm nothing if not careful. Pretty cool though, the biggest determining factor (if a few minutes of time isn't critical) is simply the volume of cold water bath.
+
+Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperatures faster -- but even the slow pump can do it. But it does tell me an important result that if I'm running a closed-loop wort chiller, I'd better be prepared with a much larger volume of cold water than hot water I need to chill. 
+
+I think, perhaps, most importantly this demonstrated that I really need to get outside more often.
 
 ## Code
 I wrapped up the equations in some pert little code, reproduced here for posterity
@@ -99,11 +108,11 @@ def KtoF(T):
 
 def StoM(t):
 	return t/60
-
-Q = 80 * 0.00105150 # gal/hr to L/s
+Qgph = 158
+Q = Qgph * 0.00105150 # gal/hr to L/s
 rho = 1000     		# water density 
 Vb = 3*.00379  		# gal to m3 hot bath
-Vcg = np.array([1, 3, 6, 9, 12])
+Vcg = np.array([1, 3, 6, 9, 12, 15])
 
 mb = rho*Vb  		# mass of the wort
 alphab = Q/mb
@@ -123,17 +132,16 @@ plt.grid()
 # looping over different cold water bath volumes
 for v in Vcg:
 	Vc = v*.00379	# cold bath volume (m3)
-	mc = rho*Vcg 	# mass of cold bath
+	mc = rho*Vc 	# mass of cold bath
 	alphac = Q/mc
 
 	gamma = (Tbi-Tii)/(1+alphac/alphab) # intermediate calc
 
 	Tb = Tbi + (np.exp(-(alphab + alphac)*t)-1)*gamma
 	Ti = Tbi + (-(alphac/alphab)*np.exp(-(alphab + alphac)*t)-1)*gamma
-	plt.plot(StoM(t),KtoF(Tb))
-	plt.plot(StoM(t),KtoF(Ti),
-		label=str(v)+' gal',
-		linestyle='--'
-		)
+	plt.plot(StoM(t),KtoF(Tb), label=str(v)+' gal cold')
+	plt.plot(StoM(t),KtoF(Ti), 'k--')
+plt.legend(loc='best', ncol=2)
+plt.title('Pump flowrate %s gph'%(Qgph))
 plt.show()
 {% endhighlight %}
