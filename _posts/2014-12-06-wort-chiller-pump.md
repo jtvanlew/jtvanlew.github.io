@@ -89,7 +89,7 @@ T_b = T_{b,i} - \frac{\Delta T_i}{1+\alpha}
 \end{equation}
 $$
 
-For the simple case of when $\alpha = 1$ (aka equal sizes of hot and cold tanks), the final temperature of the hot reservoir is simply $T_b = T_{b,i}/2 + T_{c,i}/2$ -- or the average value of the initial temperatures. This is exactly what we should have expected so it's good that it worked out.
+For the simple case of when $\alpha = 1$ (aka equal sizes of hot and cold tanks), the final temperature of the hot reservoir is simply $$T_b = T_{b,i}/2 + T_{c,i}/2$$ -- or the average value of the initial temperatures. This is exactly what we should have expected so it's good that it worked out.
 
 I also would like to point out that this steady state temperature is not at all a function of the pump flowrate. It's simply a mass-weighted average for temperature based on the sizes of my two tanks. The only place the flowrate does come in to play is in the exponential term -- it dictates how quickly the system will reach the steady state / equilibrium.
 
@@ -105,7 +105,7 @@ The first thing I want to plot are steady-state temperatures as a function of th
 
 ![wort chiller temp plots](/images/post/figure-wort-chiller-ss.png)
 
-The shaded regions represent acceptable (blue) and unacceptable (red) mass ratios if we want to ever hit 80 F as the pitching temperature for our hot wort. The intersection of our target pitching temperature and the steady state value comes at $\alpha = 0.36$. This translates to a cold bath volume that is 2.8 times larger than the hot wort. For my example of having 3 gallons of hot wort, I'll need 8.3 gallons of ice water when I begin to chill. That's a remarkably large volume of water -- considering the whole point of this was to try and conserve water during the cooling process. I think a future post will compare the total amounts of water consumed during open, closed, and mixed chilling.
+The shaded regions represent acceptable (blue) and unacceptable (red) mass ratios if we want to ever hit 80 F as the pitching temperature for our hot wort. The intersection of our target pitching temperature and the steady state value comes at $\alpha = 0.36$. This translates to a cold bath volume that is 2.8 times larger than the hot wort. For my example of having 3 gallons of hot wort, I'll need 8.3 gallons of ice water when I begin to chill. That's almost 9 gallons MINIMUM! That's a remarkably large volume of water -- considering the whole point of this was to try and conserve water during the cooling process. I think a future post will compare the total amounts of water consumed during open, closed, and mixed chilling.
 
 
 ### Transient hot and cold temperatures with different volumes
@@ -115,20 +115,20 @@ Now that we know we need a minimum of $\alpha = 0.36$ in order to ever hit a pit
 
 The upper and lower lines are the plots of hot and cold water temperatures, respectively. We see again that with $\alpha = 0.36$ we just barely will hit that 80 F target after sufficient time. With smaller volumes of cold water (larger $\alpha$), the cold bath raises up faster so the hot bath never has a chance to reach 80 F. As the cold volume increases ($\alpha < 0.36$), the target temperature is hit at earlier and earlier times.
 
-The ratio of $\alpha = 0.25$ looks like a good value. It looks like it takes about 4 and a half minutes to hit 80 F. It also means if I have 3 gal of wort, I'll need 12 gallons of ice water (that's not too much, I guess?).
+For the next analysis, I want to take the ratio of $\alpha = 0.25$. It looks fast enough; it takes about 4 and a half minutes to hit 80 F. It also means if I have 3 gal of wort, I'll need 12 gallons of ice water (that's not too much, I guess?).
 
 ### Transient hot and cold with different flowrates
-The next logical step is to take my coshen mass ratio and find the temperature profiles for different flowrates. 
+The next logical step is to take my chosen mass ratio and find the temperature profiles for different flowrates. 
 
 ![wort chiller temp plots](/images/post/figure-wort-chiller-q.png)
 
-There's a pretty dramatic difference in time between 40 gph and 80 gph, about 9 minutes for the slowest flowrate. You begin to then get diminishing returns for higher flowrate pumps. All the way to 200 gph, the time to hit my target temperature is only reduced to about 2 minutes. 
+There's a pretty dramatic difference in time between 40 gph and 80 gph, about 9 minutes for the slowest flowrate. You begin to then get diminishing returns for higher flowrate pumps. All the way to 200 gph, the time to hit my target temperature is only reduced to about 2 minutes from 4.5 minutes. 
 
 I must note, though, that I haven't thought at all about how effective the physical wort chiller is that's sitting in the hot liquid. I suspect that at the large flow rates, my assumption that the chilling water exits at the same temperature as the average temperature of the hot bath becomes less and less valid. That faster flow rate might be completely wasted if the efficiency of the chiller isn't able to match it. 
 
 ## Conclusions.... kind of
 
-Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperature about a minute faster -- given all the assumptions of my energy balance. Those flowrates are given by the pump description but I doubt I'd reach those values when its connected to the long copper coil of the wort chiller, and its concomitant pressure drop. Considering that I titled this "wort chiller pump" and not "wort chiller cold volume", I think the most important thing these equations highlight is how much more dependent the results are on the cold water volume than any aspect of the pump flowrate. You're not going to get anywhere unless your cold water volume is almost 3 times larger than hot. That's pretty interesting.
+Now... what does any of thise have to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperature about a minute faster -- given all the assumptions of my energy balance. Those flowrates are given by the pump description but I doubt I'd reach those values when its connected to the long copper coil of the wort chiller, and its concomitant pressure drop. Considering that I titled this "wort chiller pump" and not "wort chiller cold volume", I think the most important thing these equations highlight is how much more dependent the results are on the cold water volume than any aspect of the pump flowrate. You're not going to get anywhere unless your cold water volume is almost 3 times larger than hot. That's pretty interesting.
 
 ## Code
 I wrapped up the equations in some pert little code, reproduced here for posterity
@@ -137,44 +137,111 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def KtoF(T):
+	# temperature converter for Kelvin to Farenheit
 	return (T-273)*1.8+32
 
 def StoM(t):
+	# time converter for seconds to minutes
 	return t/60
-Qgph = 158
+
+# Physical properties of the system
+Qgph = 80
 Q = Qgph * 0.00105150 # gal/hr to L/s
 rho = 1000     		# water density 
 Vb = 3*.00379  		# gal to m3 hot bath
-Vcg = np.array([1, 3, 6, 9, 12, 15])
-
 mb = rho*Vb  		# mass of the wort
-alphab = Q/mb
-
-t = np.linspace(0,500,100)
-Tmin = np.zeros(len(t))+80
-Tii = 273 			# K
+Tci = 273 			# K
 Tbi = 373 			# K
+DeltaTi = Tbi - Tci
+t = np.linspace(0,600,100) # timespan
 
-plt.close('all')
-plt.plot(StoM(t),Tmin,'k',linewidth=3,label='80 F limit')
+# Non-dimensional parameters
+alphas = np.array([1, 0.5, 0.36, 0.25, 0.1, 0.01])
+tau = mb/Q
+
+
+
+
+
+# Analysis of steady-state~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+alphaArray = np.linspace(0, 1, 1000)
+Tf = Tbi - DeltaTi/(1+alphaArray) 
+Taim = np.zeros(len(alphaArray))+80 # the temperature we're aiming for (as an array with time)
+
+TfGood = Tf[np.where(KtoF(Tf)<80)]
+alphaGood = alphaArray[np.where(KtoF(Tf)<80)]
+TfBad = Tf[np.where(KtoF(Tf)>80)]
+alphaBad = alphaArray[np.where(KtoF(Tf)>80)]
+alphaMin = alphaGood[-1]
+print "Minimum necessary mass-ratio = " + str(round(alphaMin,2))
+
+plt.figure(1)
+plt.plot(alphaArray, Taim,'k',linewidth=3,label='80 F target')
+plt.plot(alphaArray, KtoF(Tf), 'k--', label='Steady-state Temperature')
+plt.fill_between(alphaGood, KtoF(TfGood), 0, facecolor='blue', alpha=0.5, label=r"Required $\alpha$")
+plt.fill_between(alphaBad, KtoF(TfBad), 0, facecolor='red', alpha=0.5, label=r'Unacceptable $\alpha$')
+plt.xlabel(r'Non-dimensional mass ratio, $\alpha$')
+plt.ylabel("Steady-state Temperature (F)")
+plt.legend(loc='best')
+plt.grid()
+# /Analysis of steady-state~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+# Analysis of transient~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Taim = np.zeros(len(t))+80 # the temperature we're aiming for (as an array with time)
+# set up the figure
+plt.figure(2)
+plt.plot(StoM(t),Taim,'k',linewidth=3,label='80 F target')
 plt.xlim([0,StoM(t[-1])])
 plt.xlabel('Time (minutes)')
 plt.ylabel("Temperature (F)")
 plt.grid()
 
-# looping over different cold water bath volumes
-for v in Vcg:
-	Vc = v*.00379	# cold bath volume (m3)
-	mc = rho*Vc 	# mass of cold bath
-	alphac = Q/mc
-
-	gamma = (Tbi-Tii)/(1+alphac/alphab) # intermediate calc
-
-	Tb = Tbi + (np.exp(-(alphab + alphac)*t)-1)*gamma
-	Ti = Tbi + (-(alphac/alphab)*np.exp(-(alphab + alphac)*t)-1)*gamma
-	plt.plot(StoM(t),KtoF(Tb), label=str(v)+' gal cold')
+# looping over different cold water / hot water bath volumes
+# to find the solution of temperature with time
+# reminder: alpha = m_b / m_c
+for alpha in alphas:
+	gamma = DeltaTi/(1+alpha) # intermediate calc
+	Tb = Tbi - (1 - np.exp(-(1 + alpha)*t/tau))*gamma
+	Ti = Tbi - (1 + alpha*np.exp(-(1 + alpha)*t/tau))*gamma
+	
+	# plot the current temperature profiles
+	plt.plot(StoM(t),KtoF(Tb), label=r'$\alpha$ = '+str(alpha))
 	plt.plot(StoM(t),KtoF(Ti), 'k--')
 plt.legend(loc='best', ncol=2)
 plt.title('Pump flowrate %s gph'%(Qgph))
+# /Analysis of transient~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Analysis of flowrate~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# set up the figure
+plt.figure(3)
+plt.plot(StoM(t),Taim,'k',linewidth=3,label='80 F target')
+plt.xlim([0,StoM(t[-1])])
+plt.xlabel('Time (minutes)')
+plt.ylabel("Temperature (F)")
+plt.grid()
+
+Qgph = [40, 80, 100, 120, 150, 200]
+
+alphaQ = 0.25
+# looping over different flowrates
+# to find the solution of temperature with time
+for q in Qgph:
+	Q = q
+	q = Q * 0.00105150 # gal/hr to L/s
+	tau = mb/q
+	gamma = DeltaTi/(1+alphaQ) # intermediate calc
+	Tb = Tbi - (1 - np.exp(-(1 + alphaQ)*t/tau))*gamma
+	Ti = Tbi - (1 + alphaQ*np.exp(-(1 + alphaQ)*t/tau))*gamma
+	
+	# plot the current temperature profiles
+	plt.plot(StoM(t),KtoF(Tb), label=r'flowrate = '+str(Q))
+	plt.plot(StoM(t),KtoF(Ti), 'k--')
+plt.legend(loc='best', ncol=2)
+plt.title(r'Mass ratio $\alpha$ = %s'%(alphaQ))
+# /Analysis of flowrate~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 plt.show()
 {% endhighlight %}
