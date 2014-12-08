@@ -38,41 +38,45 @@ Obviously $\dot{m}$ is the mass flow pushed by the pump, and $m_b$ and $m_c$ are
 
 $$
 \begin{equation}
-\cfrac{\mathrm{d}}{\mathrm{dt}}\begin{bmatrix}T_b\\T_c\end{bmatrix} = \begin{bmatrix}-\alpha_b & \alpha_b \\ \alpha_c & -\alpha_c\end{bmatrix}\begin{bmatrix}T_b\\T_c\end{bmatrix}
+\cfrac{\mathrm{d}}{\mathrm{dt}}\begin{bmatrix}T_b\\T_c\end{bmatrix} = \begin{bmatrix}-\dot{m}/m_b & \dot{m}/m_b \\ \dot{m}/m_c & -\dot{m}/m_c\end{bmatrix}\begin{bmatrix}T_b\\T_c\end{bmatrix}
 \end{equation}
 $$
 
-where $\alpha_b = \dot{m}/m_b$ and $\alpha_c = \dot{m}/m_c$. The vector-form of the simple ODE is solved in the same form as any other ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). To find the solution, we'll find the eigen values from the determinant of the coefficient matrix. The two eigen values are $\lambda_1 = 0$ and $\lambda_2 = -(\alpha_b + \alpha_c)$. The corresponding eigen vectors are
+The vector-form of the simple ODE is solved in the same method as we would a classical first order ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). In other words, we can assume the solution is of some form (exponential) and then where the time constant in the exponential growth/decay comes from eigenvalues of the problem. For this system of equations, we find not only the eigenvalues but eigenvectors.
+
+The two eigenvalues are $\lambda_1 = 0$ and $\lambda_2 = -(\dot{m}/m_b + \dot{m}/m_c)$. The corresponding eigen vectors are
 
 $$\bar{\eta}_1 = \begin{bmatrix}1\\1\end{bmatrix}$$
 
 and 
 
-$$\bar{\eta}_2 = \begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}$$ 
+$$\bar{\eta}_2 = \begin{bmatrix}1\\-m_b/m_c\end{bmatrix}$$ 
 
 Thus the general solution is
 
 $$
 \begin{equation}
-\begin{bmatrix}T_b\\T_c\end{bmatrix} = C_1\begin{bmatrix}1 \\ 1 \end{bmatrix} + C_2 e^{-(\alpha_c + \alpha_b)t}\begin{bmatrix}1\\-\alpha_c/\alpha_b\end{bmatrix}
+\begin{bmatrix}T_b\\T_c\end{bmatrix} = C_1\begin{bmatrix}1 \\ 1 \end{bmatrix} + C_2 e^{-(\dot{m}/m_b + \dot{m}/m_c)t}\begin{bmatrix}1\\-m_b/m_c\end{bmatrix}
 \end{equation}
 $$
 
-The initial conditions can be just taken as boiling for the hot bath and freezing for the cold one. The coefficients are then
+The initial conditions are left as just generic values for both baths. Plugging in those values at time $t=0$ to the general solution let's us find the coefficients:
 
 $$
 \begin{equation}
-C_1 = T_{b,i} - \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\\\
-C_2 = \cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}
+C_1 = T_{b,i} - \cfrac{\Delta T_i}{1+m_b/m_c}\\\
+C_2 = \cfrac{T_{b,i} - T_{c,i}}{1+m_b/m_c}
 \end{equation}
 $$
+
+where $\Delta T_i$ is just the difference in temperatures of the two baths at the initial condition. I'll define the ratio of hot-cold baths as a dimensionless parameter $\alpha$. When $\alpha < 1$, the hot bath is being cooled by a larger mass of cold water. Vice versa for $\alpha > 1$. 
 
 Finally, the solutions, when broken out of vector form, are
 
 $$
 \begin{equation}
-T_b(t) = T_{b,i} + \left[e^{-(\alpha_b+\alpha_c)t}-1\right] \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)\\\
-T_c(t) = T_{b,i} + \left[-\left(\alpha_c/\alpha_b\right)e^{-(\alpha_b+\alpha_c)t}-1\right] \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)
+T_b(t) = T_{b,i} - \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)\left[1-e^{-\dot{m}/m_b(1+\alpha)t}\right] \\\
+T_c(t) = T_{b,i} - \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)\left[1+\left(\frac{m_b}{m_c}\right)e^{-\dot{m}/m_b(1+\alpha)t}\right] 
 \end{equation}
 $$
 
