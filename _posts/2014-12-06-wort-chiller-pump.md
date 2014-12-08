@@ -132,7 +132,7 @@ Now... what does any of thise have to do with buying a pump? Well, not much. The
 
 ## Code
 I wrapped up the equations in some pert little code, reproduced here for posterity
-{% highlight py %}
+{% highlight python %}
 import numpy as np
 import matplotlib.pyplot as plt
 
