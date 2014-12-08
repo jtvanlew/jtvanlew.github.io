@@ -71,35 +71,64 @@ $$
 
 where $\Delta T_i$ is just the difference in temperatures of the two baths at the initial condition. I'll define the ratio of hot-cold baths as a dimensionless parameter $\alpha$. When $\alpha < 1$, the hot bath is being cooled by a larger mass of cold water. Vice versa for $\alpha > 1$. 
 
-Finally, the solutions, when broken out of vector form, are
+I want to clean up the solution a little so I'll introduce another term, $\tau$ which I'll consider as the time constant for the system. It'll be defined as $\tau = \frac{m_b}{\dot{m}}$ -- which can be thought of as how long does it take to move one hot bath's worth of mass through the transfer lines. Finally, the solutions, when broken out of vector form, are
 
 $$
 \begin{equation}
-T_b(t) = T_{b,i} - \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)\left[1-e^{-\dot{m}/m_b(1+\alpha)t}\right] \\\
-T_c(t) = T_{b,i} - \left(\cfrac{T_{b,i} - T_{c,i}}{1+\alpha_c/\alpha_b}\right)\left[1+\left(\frac{m_b}{m_c}\right)e^{-\dot{m}/m_b(1+\alpha)t}\right] 
+T_b(t) = T_{b,i} - \left(\frac{\Delta T_i}{1+\alpha}\right)\left[1-e^{-(1+\alpha)t/\tau}\right] \\\
+T_c(t) = T_{b,i} - \left(\frac{\Delta T_i}{1+\alpha}\right)\left[1+\alpha e^{-(1+\alpha)t/\tau}\right] 
 \end{equation}
 $$
 
-## Result
-I found a pump on Amazon that was $7 and ran at 80 gal/hr. I'll assume that my wort is about 3 gallons. So I want to compare the temperatures of the two baths as the cold bath volume changes. Like, can 3 gal of frozen water drop 3 gal of boiling water to 80 F? (no) or what size do I need in order to actually hit 80 F? The easiest way to solve this is with some simple scripting.
+### Short equation discussions
+I'd like to actually pause to look at the solutions of the hot and cold bath temperatures. As a logic check, I want to see how the solutions look as $t\rightarrow \infty$ -- or in other words, steady state. For the hot bath we're left with 
 
-The code is given in its entirety at the bottom. The plot coming from the code is:
+$$
+\begin{equation}
+T_b = T_{b,i} - \frac{\Delta T_i}{1+\alpha}
+\end{equation}
+$$
 
-![wort chiller temp plots](/images/post/figure_2.png)
+For the simple case of when $\alpha = 1$ (aka equal sizes of hot and cold tanks), the final temperature of the hot reservoir is simply $T_b = T_{b,i}/2 + T_{c,i}/2$ -- or the average value of the initial temperatures. This is exactly what we should have expected so it's good that it worked out.
 
-The upper lines are the plots of hot water bath temperatures with time, starting with 1 gal, then going 3, 6, 9, 12, and 15 gallons for the cold bath. The lower, dashed lines are the cold baths for the same cold bath volumes.
+I also would like to point out that this steady state temperature is not at all a function of the pump flowrate. It's simply a mass-weighted average for temperature based on the sizes of my two tanks. The only place the flowrate does come in to play is in the exponential term -- it dictates how quickly the system will reach the steady state / equilibrium.
 
-What the lines show us is that for cold water baths less than 9 gal we'll never hit 80 F before the thermal energy equilibrates between the two water volumes. At 9 gal and above, however, we logically hit 80 F earlier with larger cold volumes.
+Ok. With that little discussion out of the way, let's look at some graphs...
 
-If I do it again with a flowrate of $Q = 158$ gph, 
+## Results
+Background: I found a pump on Amazon that was $7 and ran at 80 gal/hr. I'll assume that my wort is about 3 gallons. I'll generally top off my fermenter with chilled water to hit 5 gallons so I aim for chilling the wort to only 80 F and then in the fermenter I can get pitching temperatures. These values will be used as guidlines for the computations.
 
-![wort chiller temp plots](/images/post/pump-q158.png)
+I want to compare the temperatures of the two baths as the cold bath volume changes. Like, can 3 gal of frozen water drop 3 gal of boiling water to 80 F? (no). Or what size do I need in order to actually hit 80 F and how quickly will it reach it? The easiest way to solve this is with some simple scripting. The code is given in its entirety at the bottom. 
 
-All that happens is a faster approach to steady state temperature, but it doesn't do anything for the actual steady state value. A careful inspection of Eqs. (5) should have revealed that before we began. But I'm nothing if not careful. Pretty cool though, the biggest determining factor (if a few minutes of time isn't critical) is simply the volume of cold water bath.
+### Steady state final wort temperature
+The first thing I want to plot are steady-state temperatures as a function of the mass-ratio, $\alpha = m_b/m_c$. 
 
-Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperatures faster -- but even the slow pump can do it. But it does tell me an important result that if I'm running a closed-loop wort chiller, I'd better be prepared with a much larger volume of cold water than hot water I need to chill. 
+![wort chiller temp plots](/images/post/figure-wort-chiller-ss.png)
 
-I think, perhaps, most importantly this demonstrated that I really need to get outside more often.
+The shaded regions represent acceptable (blue) and unacceptable (red) mass ratios if we want to ever hit 80 F as the pitching temperature for our hot wort. The intersection of our target pitching temperature and the steady state value comes at $\alpha = 0.36$. This translates to a cold bath volume that is 2.8 times larger than the hot wort. For my example of having 3 gallons of hot wort, I'll need 8.3 gallons of ice water when I begin to chill. That's a remarkably large volume of water -- considering the whole point of this was to try and conserve water during the cooling process. I think a future post will compare the total amounts of water consumed during open, closed, and mixed chilling.
+
+
+### Transient hot and cold temperatures with different volumes
+Now that we know we need a minimum of $\alpha = 0.36$ in order to ever hit a pitching temperature, let's see how the temperatures change in time for different $\alpha$ at a flowrate of 80 gph. 
+
+![wort chiller temp plots](/images/post/figure-wort-chiller-transient.png)
+
+The upper and lower lines are the plots of hot and cold water temperatures, respectively. We see again that with $\alpha = 0.36$ we just barely will hit that 80 F target after sufficient time. With smaller volumes of cold water (larger $\alpha$), the cold bath raises up faster so the hot bath never has a chance to reach 80 F. As the cold volume increases ($\alpha < 0.36$), the target temperature is hit at earlier and earlier times.
+
+The ratio of $\alpha = 0.25$ looks like a good value. It looks like it takes about 4 and a half minutes to hit 80 F. It also means if I have 3 gal of wort, I'll need 12 gallons of ice water (that's not too much, I guess?).
+
+### Transient hot and cold with different flowrates
+The next logical step is to take my coshen mass ratio and find the temperature profiles for different flowrates. 
+
+![wort chiller temp plots](/images/post/figure-wort-chiller-q.png)
+
+There's a pretty dramatic difference in time between 40 gph and 80 gph, about 9 minutes for the slowest flowrate. You begin to then get diminishing returns for higher flowrate pumps. All the way to 200 gph, the time to hit my target temperature is only reduced to about 2 minutes. 
+
+I must note, though, that I haven't thought at all about how effective the physical wort chiller is that's sitting in the hot liquid. I suspect that at the large flow rates, my assumption that the chilling water exits at the same temperature as the average temperature of the hot bath becomes less and less valid. That faster flow rate might be completely wasted if the efficiency of the chiller isn't able to match it. 
+
+## Conclusions.... kind of
+
+Now... what does that have anything to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperature about a minute faster -- given all the assumptions of my energy balance. Those flowrates are given by the pump description but I doubt I'd reach those values when its connected to the long copper coil of the wort chiller, and its concomitant pressure drop. Considering that I titled this "wort chiller pump" and not "wort chiller cold volume", I think the most important thing these equations highlight is how much more dependent the results are on the cold water volume than any aspect of the pump flowrate. You're not going to get anywhere unless your cold water volume is almost 3 times larger than hot. That's pretty interesting.
 
 ## Code
 I wrapped up the equations in some pert little code, reproduced here for posterity
