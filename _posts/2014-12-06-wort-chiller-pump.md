@@ -12,7 +12,7 @@ categories:
 tags: "wort chiller, homebrewing, pump"
 ---
 
-Big edit: After sharing this I had the sudden panic that I forgot to mention the gigantic assumption that **I'm only looking at the sensible heat of the system**, which is why I can treat the energy system in terms of temperature. That assumption makes the equations tenable but also puts a fairly significant limit to the applicaption of the results. Namely if ice were in the cold bath (which is quite common), the latent heat of melting would keep the cold bath cold for much longer than this analysis would otherwise predict. Anyway, this analysis was done for the sake of curiosity so its results stand as they do.
+Big edit: After sharing this I had the sudden panic that I forgot to mention the gigantic assumption that **I'm only looking at the sensible heat of the system**, which is why I can treat the energy equations in terms of temperature (and not, say, enthalpy). That assumption makes the equations tenable but also puts a fairly significant limit to the applicaption of the results. Namely if ice were in the cold bath (which is quite common), the latent heat of melting would keep the cold bath cold for much longer than this analysis would otherwise predict. Anyway, this analysis was done for the sake of curiosity so its results stand as they do.
 
 At the new apartment, my brewing has gone outdoors to the back patio. The patio drains off onto the cars parked below the patio, so running an open loop of water through my wort chiller isn't an option anymore. Not even to mention the ethics of dumping gallons of water during a drought.
 
