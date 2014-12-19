@@ -1,5 +1,5 @@
 title:            Jon
-description:      Van Lew
+description:      '& the art of over engineering'
 logo:             Molly_Small.png
 header_bg:        seattle.jpg
 disqus_shortname: jonnyvlreport
@@ -131,6 +131,8 @@ prose:
               value: travel
             - name: "Programming"
               value: programming
+            - name: "Brewing"
+              value: brewing
           alterable: true
       - name: "tags"
         field:
