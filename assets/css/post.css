@@ -353,10 +353,10 @@ html, body, .notepad-post-container, .notepad-post-header {
   .notepad-post-title-simple h1 {
     color: #000;
     font-weight: 400;
-    font-size: 3.125rem;
+    font-size: 2.325rem;
     padding: 0;
-    padding-top: 5rem;
-    padding-bottom: 4.375rem;
+    padding-top: 2rem;
+    padding-bottom: 1.375rem;
     margin: 0 auto;
     line-height: 1.1;
     text-align: center;
@@ -364,20 +364,20 @@ html, body, .notepad-post-container, .notepad-post-header {
     @media only screen and (min-width: 40.063em) {
       .notepad-page-title h1,
       .notepad-post-title-simple h1 {
-        font-size: 4.375rem;
-        padding-top: 5.625rem;
-        padding-bottom: 5.625rem; } }
+        font-size: 1.775rem;
+        padding-top: 2.625rem;
+        padding-bottom: 1.625rem; } }
     @media only screen and (min-width: 70em) {
       .notepad-page-title h1,
       .notepad-post-title-simple h1 {
-        padding-top: 6.875rem;
-        padding-bottom: 6.875rem; } }
+        padding-top: 2.875rem;
+        padding-bottom: 2.875rem; } }
     @media only screen and (min-width: 90em) {
       .notepad-page-title h1,
       .notepad-post-title-simple h1 {
-        font-size: 5.3125rem;
-        padding-top: 8.125rem;
-        padding-bottom: 8.125rem; } }
+        font-size: 3.3125rem;
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem; } }
   .notepad-page-title .notepad-post-meta-simple,
   .notepad-post-title-simple .notepad-post-meta-simple {
     text-align: center;

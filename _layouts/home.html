@@ -1,10 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="en">
 {% include head.html %}
-<body class="home-template">
-{% if site.header_bg %}<div class="notepad-parallax-background" style="background-image: url({{ site.url }}/images/headers/{{site.header_bg}})"></div>{% endif %}
-{% include headerhome.html %}
+<body class="post-template page">
+
+
+<main id="notepad-page-container" class="notepad-page-container" role="main">
+{% include headerpage.html %}
+
 <main class="notepad-content" role="main">
+
 {{ content }}
 </main>
 {% include footer.html %}
