@@ -10,7 +10,7 @@ description: "and the art of over-engineering"
 categories: 
   - Brewing
 tags: 
-  - "wort chiller"
+  - [wort chiller]
   - homebrewing 
   - "engineering"
 ---
