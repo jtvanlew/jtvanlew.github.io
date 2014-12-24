@@ -8,7 +8,7 @@ category: Brewing
 tags: 
   - homebrew
   - beer
-  - Ballast Point
+  - [Ballast Point]
 imagefeature: "ballast-point.jpg"
 comments: true
 share: true

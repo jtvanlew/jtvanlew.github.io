@@ -2,7 +2,9 @@
 layout: post
 title: "The VL-Ferm Part 1"
 description: energy balance
-tags: homebrew
+tags: 
+  - homebrew
+  - engineering
 category: Brewing
 lang: en
 mathjax: true
