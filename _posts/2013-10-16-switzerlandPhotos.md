@@ -5,7 +5,7 @@ category: Travel
 comments: true
 share: true
 chart: true
-tags: "travel, photography, switzerland"
+tags: "travel photography switzerland"
 published: true
 mathjax: false
 categories: 

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Soma Double Cross
-tags: "Soma, Double Cross"
+tags: 
+   - Soma 
+   - "Double Cross"
 category: Bicycles
 comments: true
 share: true

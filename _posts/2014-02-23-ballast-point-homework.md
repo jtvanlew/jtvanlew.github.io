@@ -9,8 +9,6 @@ tags:
   - homebrew
   - beer
   - Ballast Point
-  - "homebrew,beer,Ballast Point"
-  - "homebrew,beer,Ballast Point,homebrew,beer,Ballast Point"
 imagefeature: "ballast-point.jpg"
 comments: true
 share: true

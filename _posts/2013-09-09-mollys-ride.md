@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Molly's new whip"
-tags: "flickr, Molly, cycling"
+tags: "flickr Molly cycling"
 category: Bicycles
 comments: true
 share: true

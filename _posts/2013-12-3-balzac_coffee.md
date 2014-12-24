@@ -2,7 +2,7 @@
 layout: post
 title: The Pleasures and Pains of Coffee
 category: Coffee
-tags: [coffee]
+tags: "coffee balzac"
 comments: true
 share: true
 chart: true
