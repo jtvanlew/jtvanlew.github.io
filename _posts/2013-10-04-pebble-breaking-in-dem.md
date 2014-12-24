@@ -6,7 +6,7 @@ mathjax: false
 comments: true
 share: true
 chart: true
-tags: "liggghts, DEM, python"
+tags: "liggghts DEM python"
 categories: 
   - engineering
 modified: "2014-12-24"
