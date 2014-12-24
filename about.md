@@ -29,7 +29,7 @@ My name is ^^ and this is my website.
 This is Molly, the eponymous little black dog:
 
 <figure>
-	<img src="{{ site.url }}/images/pages/about/molly-bw.jpg" alt="Molly">
+	<img src="{{ site.url }}/images/page/about/molly-bw.jpg" alt="Molly">
 	<figcaption>Molly, so serious</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ This is the start of Molly's story, written by the rescue agency that found her:
 If you really paid attention, you may have noticed something strange about that story: it's in Chinese and you can't read it. Ho ho, you clever dog! Molly and her sister were found outside a pig farm in Taiwan (explaining the language) with a skin disease and no mother around to take care of them. The particular rescue agency that took care of her then put her online for an abroad adoption -- which is how we came to find her. She was flown to LAX by a volunteer and picked up by us. Here's Molly a few days after she arrived in Los Angeles, 
 
 <figure>
-	<img src="{{ site.url }}/images/pages/about/molly-young.jpg" alt="young Molly">
+	<img src="{{ site.url }}/images/page/about/molly-young.jpg" alt="young Molly">
 	<figcaption>Molly soon after arriving from Taiwan</figcaption>
 </figure>
 
