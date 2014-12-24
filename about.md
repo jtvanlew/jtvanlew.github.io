@@ -46,8 +46,8 @@ If you really paid attention, you may have noticed something strange about that 
 
 I love this dog a whole lot.
 
-</hr>
-
+<hr>
+## Website info
 The blog-o-side of my site currently has a total of {{ site.posts | size }} posts in {{ site.categories | size }} categories which combined have only {{ total_words }} words. When you think about it, that will only take an average reader (going at {{ site.wpm }} WPM) approximately {% if readtime > 60 %}{% assign readtime_hours = readtime | divided_by: 60 %}{% assign readtime_minutes = readtime | modulo:60 %}{% if readtime_hours > 1 and readtime_hours < 2 %}1 hour{% else %}<span class="hour">{{ readtime_hours }}</span> hours{% endif %}{% if readtime_minutes < 1 %}{% elsif readtime_minutes > 1 and readtime_minutes < 1.5 %} and 1 minute {% elsif readtime_minutes > 1.5 %} and <span class="time">{{ readtime_minutes }}</span> minutes{% endif %}{% else %}{% if readtime < 1 %}less than 1 minute {% elsif readtime > 1 and readtime < 1.5 %}1 minute {% elsif readtime > 1.5 %}<span class="time">{{ readtime }}</span> minutes {% endif %}{% endif %} to read. So, heck, go through the entire site while you're here!
 
 The page is maintained on GitHub where it's powered by [Jekyll](http://jekyllrb.com/). The last commit to the github repository was on {{ site.time | date: "%A, %d %b %Y" }} at {{ site.time | date: "%I:%M %p" }} [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time "Temps Universel Coordonné").
