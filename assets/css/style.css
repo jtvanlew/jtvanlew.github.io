@@ -6,7 +6,10 @@
 
 .cf:after {
   clear: both; }
-
+.hidden {
+    display: none!important;
+    visibility: hidden!important;
+}
 body {
   font-family: "Open Sans", sans-serif;
   height: auto;
@@ -57,7 +60,7 @@ header, main, footer {
     .notepad-blog-menu .notepad-mobile-menu a:hover {
       color: #403B33; }
   .notepad-blog-menu ul {
-    background: #94C7B6;
+    background: #50ccf4;
     position: absolute;
     width: 100%;
     -webkit-transform: translate3d(0, -110%, 0);

@@ -1,7 +1,7 @@
 title:            Jon
 description:      '& the art of over engineering'
 logo:             Molly_Small.png
-header_bg:        seattle.jpg
+header_bg:        
 disqus_shortname: jonnyvlreport
 share:            true
 dropcap:			true
@@ -47,8 +47,8 @@ links:
     url: /about
   - title: Travel Photos
     url: /photos/maps/
-  # - title: Work
-  #   url: /cv
+  - title: Work
+    url: /page/xively-temp/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles

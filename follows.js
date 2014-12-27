@@ -150,8 +150,8 @@
 										width: 600,
 										height: 400,
 										renderer: 'scatterplot',
-										min: 55,//parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										max: 85,
+										min: 45,//parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										max: 75,
 										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {
 											top: 0.02,
