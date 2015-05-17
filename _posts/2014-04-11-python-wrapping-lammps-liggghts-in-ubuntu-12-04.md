@@ -24,7 +24,10 @@ As I've [discussed before](http://jon.vanlew.net/tag/liggghts.html), I've been u
 The first time I got it working on my (Ubuntu 12.04) machine at work, it took like a week of pulling out my hair on internet forums and just plain guess work. My hard drive on that computer failed recently so I had to get everything back up and running from scratch. Now I'm just slightly more savvy with the guts of Ubuntu so instead of a miserable week it was just an annoying afternoon. Feeling proud of myself, I figured I'd write this to help anyone else who might want the Python wrapper with Ubuntu -- as well as for future-me when I've got more computer problems and need to do this again.
 
 Let's start from the very first step of pulling LIGGGHTS from the public git repository. You can get it here:
-    git clone https://github.com/CFDEMproject/LIGGGHTS-PUBLIC.git ~/LIGGGHTS/LIGGGHTS-PUBLIC
+
+```console
+git clone https://github.com/CFDEMproject/LIGGGHTS-PUBLIC.git ~/LIGGGHTS/LIGGGHTS-PUBLIC
+```
 
 If you don't have `mpic++` installed already, you'll need it to build LIGGGHTS. You should do an `apt-get`, it's 
 

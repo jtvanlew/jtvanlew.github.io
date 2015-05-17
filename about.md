@@ -8,14 +8,12 @@ charttype: pie
 comments: true
 ---
 
-<div class="circular"></div>
+<div class="circle large" style="background-image: url('{{ site.url }}/img/vanlew_profile.jpg')"></div>
 
 That's me and this is Molly, the eponymous little black dog:
 
-<figure>
-	<img src="{{ site.url }}/img/page/about/molly-bw.jpg" alt="Molly">
-	<figcaption>Molly, so serious</figcaption>
-</figure>
+<div class="circle large" style="background-image: url('{{ site.url }}/img/page/about/molly-bw.jpg')"></div>
+
 
 This is the start of Molly's story, written by the rescue agency that found her:
 
