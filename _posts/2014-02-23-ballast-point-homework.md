@@ -9,12 +9,9 @@ tags:
   - homebrew
   - beer
   - [Ballast Point]
-imagefeature: "ballast-point.jpg"
 comments: true
 share: true
 mathjax: false
-location: "Al Gharaffa, Qatar"
-locationgps: "25.3209031,51.4365133"
 chart: true
 published: true
 categories: 
