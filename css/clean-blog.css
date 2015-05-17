@@ -1,3 +1,6 @@
+.row {
+  padding-bottom:20px;
+}
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -54,35 +57,7 @@ hr.small {
     border-bottom: 1px solid rgba(0,0,0,.1);
     *zoom: 1;
 }
-.post-meta .day {
-    display: block;
-    font-size: 5.25rem;
-    font-weight: 400;
-    color: #F47850;
-    font-family: "Vollkorn", sans-serif; }
-.post-meta .month-year {
-    display: block;
-    color: #403B33;
-    font-size: 1.5rem;
-    font-family: "Vollkorn", sans-serif;
-    text-transform: none; }
-/*  .post-preview .index-post-tags {
-    font-size: 1.25rem;
-    color: black;
-    text-align: left;
-    padding-top: 1.25rem;
-    padding-bottom: .25rem; }
-    .post-preview .index-post-tags a {
-      display: inline-block;
-      padding: 0.3125rem 0.9375rem;
-      margin-right: 0.1875rem;
-      color: black;
-      border: 0.0625rem solid black;
-      border-radius: 0.125rem;
-      margin-bottom: 1.3125rem; }
-      .post-preview .index-post-tags a:hover {
-        color: #e51843;
-        border: 0.0625rem solid #e51843; }*/
+
 .navbar-custom {
   background: white;
   position: absolute;
@@ -261,6 +236,18 @@ hr.small {
 .post-preview > a {
   color: #404040;
 }
+.post-preview .post-meta .day {
+    display: block;
+    font-size: 5.25rem;
+    font-weight: 400;
+    color: #F47850;
+    font-family: "Vollkorn", sans-serif; }
+.post-preview .post-meta .month-year {
+    display: block;
+    color: #403B33;
+    font-size: 1.5rem;
+    font-family: "Vollkorn", sans-serif;
+    text-transform: none; }
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
@@ -313,13 +300,14 @@ hr.small {
 }
 footer {
   padding: 50px 0 65px;
+  background-color: rgba(80, 204, 244, 0.9);
 }
 footer .list-inline {
   margin: 0;
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   margin-bottom: 0;
 }

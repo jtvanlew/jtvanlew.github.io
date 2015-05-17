@@ -30,5 +30,3 @@ If you really paid attention, you may have noticed something strange about that 
 </figure>
 
 I love this dog a whole lot.
-
-<hr>

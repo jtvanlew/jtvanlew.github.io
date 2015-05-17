@@ -27,7 +27,7 @@ layout: default
 
 				{{ content }}
 
-                <hr>
+                <!-- <hr> -->
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -41,10 +41,9 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
-
+                <hr>
+                {% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
             </div>
-            <hr>
-            {% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
         </div>
     </div>
 </article>

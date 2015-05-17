@@ -1,32 +1,24 @@
 host: 128.97.32.120
-author:           'Jon'
+author:           'Jon Van Lew'
 title:            'Little Black Dog Blog'
 description:      '& the art of over engineering'
-logo:             Molly_Small.png
-header_bg:        
 disqus_shortname: jonnyvlreport
 share:            true
 dropcap:			true
-readtime: true
-wpm:  200 
 locale: en_US
 
 baseurl:        	  
 
-# Owner/author information
-owner:
-  name:           Jon Van Lew
-  avatar:         'jtvanlew.jpg'
-  email:          jtvanlew@ucla.edu
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        jtvanlew
-  facebook:       jtvanlew
-  github:         jtvanlew      
-  instagram:      jtvanlew
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/+JonVanLew/
+
+avatar:         'jtvanlew.jpg'
+email:          jtvanlew@ucla.edu
+
+twitter_username:        jtvanlew
+facebook_username:       jtvanlew
+github_username:         jtvanlew      
+instagram_username:      jtvanlew
+# For Google Authorship https://plus.google.com/authorship
+google_plus_username:    https://plus.google.com/+JonVanLew/
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-24714334-1
@@ -98,7 +90,7 @@ prose:
       - name: "headline"
         field:
           element: "text"
-          label: "beadline"
+          label: "headline"
           placeholder: "Enter Post Headline"
       - name: "modified"
         field:

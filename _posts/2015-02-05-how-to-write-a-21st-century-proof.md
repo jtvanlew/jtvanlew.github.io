@@ -19,3 +19,9 @@ Leslie Lamport, known by most from his creation of Lamport $\TeX$ -- or more pop
 considerably in the last few centuries. Mathematicians no longer write formulas as prose, but use symbolic notation such as $e^{i\pi} + 1 = 0$. On the other hand, proofs are still written in prose pretty much the way they were in the 17th century. The proofs in Newton's _Principia_ seem quite modern. This has two consequences: proofs are unnecessarily hard to understand, and they encourage sloppiness that leads to errors.
 
 He proposes a simple solution. First we introduce a new structure. Second we create new nomenclature that will do for proofs what symbolic notation did for formulas. With those two principals, proof writing can be brought into the modern world. He does a better job of explaining his method in [this paper](http://research.microsoft.com/en-us/um/people/lamport/pubs/proof.pdf). 
+
+{% highlight ruby %}
+def foo
+puts 'foo'
+end
+{% endhighlight %}
