@@ -1,22 +1,52 @@
-<!doctype html>
-<html class="no-js" lang="en">
-{% include head.html %}
-{% if site.dropcap %}{% if page.dropcap != false %}<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float: left; font-size: 4.875rem; line-height: 3.750rem; padding-top: 0.375rem; padding-right: 0.375rem; font-family:serif}}</style>{% endif %}{% endif %}
-<body class="post-template">
-{% if page.imagefeature %}{% include headerpostcover.html %}{% else %}{% include headerpostsimple.html %}{% endif %}
-    <article class="notepad-post-content post">
-        <div>
-            <div class="paddings">
-                {{ content }}
+---
+layout: default
+---
+
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                </div>
             </div>
         </div>
-    </article>
-    <div class="cf"></div>
-{% if site.share %}{% include share.html %}{% endif %}
-{% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
-{% include author.html %}
-<div class="cf"></div>
-{% include footer.html %}
-{% include scripts.html %}
-</body>
-</html>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				{{ content }}
+
+                <hr>
+
+                <ul class="pager">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+            </div>
+        </div>
+        <hr>
+        {% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
+    </div>
+</article>
+
+

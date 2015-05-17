@@ -13,7 +13,7 @@ categories:
   - Bicycling
 ---
 
-![9713875778_6cd534da31_z.jpg](/images/post/9713875778_6cd534da31_z.jpg)
+![9713875778_6cd534da31_z.jpg](/img/post/9713875778_6cd534da31_z.jpg)
 
 Cindy and my Mom got me this awesome heavy-duty Wike trailer for my past birthday. They knew how badly I wanted to tow Molly around -- especially looking forward to the next cicLAvia coming up. 
 

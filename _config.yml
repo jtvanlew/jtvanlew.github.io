@@ -1,4 +1,5 @@
-title:            Jon
+host: 128.97.32.120
+title:            'Little Black Dog Blog'
 description:      '& the art of over engineering'
 logo:             Molly_Small.png
 header_bg:        
@@ -8,9 +9,7 @@ dropcap:			true
 readtime: true
 wpm:  200 
 locale: en_US
-# Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
-# whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
+
 baseurl:        	  
 
 # Owner/author information
@@ -47,16 +46,9 @@ links:
     url: /about
   - title: Travel Photos
     url: /photos/maps/
-  - title: Work
-    url: /page/xively-temp/
+  # - title: Work
+  #   url: /page/xively-temp/
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Los_Angeles
-future:      true
-highlighter: pygments
-markdown:    kramdown
-paginate:    5
-paginate_path: "page:num"
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
@@ -165,6 +157,9 @@ prose:
           label: "Add post to chart"
           value: true
 
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

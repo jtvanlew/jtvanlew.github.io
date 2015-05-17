@@ -12,7 +12,7 @@ categories:
   - travel
 ---
 
-![Swiss Alps](/images/post/10262232036_495e77c443_z.jpg)
+![Swiss Alps](/img/post/10262232036_495e77c443_z.jpg)
 
 I'm pretty underwhelmed with many of the [pictures I took from Switzerland](https://www.flickr.com/photos/jtvanlew/sets/72157636528671866/), but they're up on flickr. This one *almost* faithfully recreates the majesty of the Alps. This was taken on top of Rothorn, near Brienz. 
 

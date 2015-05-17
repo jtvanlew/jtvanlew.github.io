@@ -1,5 +1,24 @@
-This is my personal website using a Jekyll theme that's a (in places) heavily modified version of the one made by H.M. Faysal: http://hmfaysal.github.io/
+#Clean Blog by Start Bootstrap - Jekyll Version
 
-The site name is dedicated to my little Taiwanese Mountain Dog, Molly. You can read more about her in the About page of the site. 
+The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
-Feel free to fork it for yourself, hmfaysal did most of the work and I only hacked at it to fit better with my aesthetics with color and typography. So if you want to credit anyone, credit him. His github repo (linked above) has much detail on the features of the site.
+###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
+
+## Before You Begin
+
+In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
+
+It should look like this:
+`baseurl: ""`
+
+## What's Included
+
+A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
+
+A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
+
+You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
+
+## Support
+
+Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.

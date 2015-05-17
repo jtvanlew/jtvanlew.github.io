@@ -21,14 +21,14 @@ At the new apartment, my brewing has gone outdoors to the back patio. The patio 
 
 I went looking around for a submersible aquarium pump to run a closed-loop water cycle in a cooler -- like the one shown in this image i jacked from some dude on flickr...
 
-![wort chiller pumping](/images/post/2115697301_ff9c9a3de1.jpg)
+![wort chiller pumping](/img/post/2115697301_ff9c9a3de1.jpg)
 
 Of course I became curious about solving the energy balance for the temperatures of the wort as a function of time. It becomes interesting when you consider that the cold water flushes through the hot wort, and then warms up the cold bath as it dumps back into the reservoir. The curiosity is mostly academic and not really influencing a design as I see it. But ... here goes.
 
 # Equations
 In a really simplified sense, the hot wort and cold bath can be treated as coupled isothermal baths with one inlet/outlet of fluid. A schematic of the exchange is here:
 
-![wort chiller schematic](/images/post/wort_chiller.png)
+![wort chiller schematic](/img/post/wort_chiller.png)
 
 For this problem the cold fluid is all at $T_c$ whether its in the bath or in the transfer line. Same goes for the hot wort and hot end of the transfer line. Doing any open, transient energy balance on the two baths yields the simple coupled system of ODEs:
 
@@ -108,7 +108,7 @@ I want to compare the temperatures of the two baths as the cold bath volume chan
 ### Steady state final wort temperature
 The first thing I want to plot are steady-state temperatures as a function of the mass-ratio, $\alpha = m_b/m_c$. 
 
-![wort chiller temp plots](/images/post/figure-wort-chiller-ss.png)
+![wort chiller temp plots](/img/post/figure-wort-chiller-ss.png)
 
 The shaded regions represent acceptable (blue) and unacceptable (red) mass ratios if we want to ever hit 80 F as the pitching temperature for our hot wort. The intersection of our target pitching temperature and the steady state value comes at $\alpha = 0.36$. This translates to a cold bath volume that is 2.8 times larger than the hot wort. For my example of having 3 gallons of hot wort, I'll need 8.3 gallons of ice water when I begin to chill. That's almost 9 gallons MINIMUM! That's a remarkably large volume of water -- considering the whole point of this was to try and conserve water during the cooling process. I think a future post will compare the total amounts of water consumed during open, closed, and mixed chilling.
 
@@ -116,7 +116,7 @@ The shaded regions represent acceptable (blue) and unacceptable (red) mass ratio
 ### Transient hot and cold temperatures with different volumes
 Now that we know we need a minimum of $\alpha = 0.36$ in order to ever hit a pitching temperature, let's see how the temperatures change in time for different $\alpha$ at a flowrate of 80 gph. 
 
-![wort chiller temp plots](/images/post/figure-wort-chiller-transient.png)
+![wort chiller temp plots](/img/post/figure-wort-chiller-transient.png)
 
 The upper and lower lines are the plots of hot and cold water temperatures, respectively. We see again that with $\alpha = 0.36$ we just barely will hit that 80 F target after sufficient time. With smaller volumes of cold water (larger $\alpha$), the cold bath raises up faster so the hot bath never has a chance to reach 80 F. As the cold volume increases ($\alpha < 0.36$), the target temperature is hit at earlier and earlier times.
 
@@ -125,7 +125,7 @@ For the next analysis, I want to take the ratio of $\alpha = 0.25$. It looks fas
 ### Transient hot and cold with different flowrates
 The next logical step is to take my chosen mass ratio and find the temperature profiles for different flowrates. 
 
-![wort chiller temp plots](/images/post/figure-wort-chiller-q.png)
+![wort chiller temp plots](/img/post/figure-wort-chiller-q.png)
 
 There's a pretty dramatic difference in time between 40 gph and 80 gph, about 9 minutes for the slowest flowrate. You begin to then get diminishing returns for higher flowrate pumps. All the way to 200 gph, the time to hit my target temperature is only reduced to about 2 minutes from 4.5 minutes. 
 
