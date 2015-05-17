@@ -8,10 +8,9 @@ charttype: pie
 comments: true
 ---
 
+<div class="circular"></div>
 
-My name is ^^ and this is my website. 
-
-This is Molly, the eponymous little black dog:
+That's me and this is Molly, the eponymous little black dog:
 
 <figure>
 	<img src="{{ site.url }}/img/page/about/molly-bw.jpg" alt="Molly">
