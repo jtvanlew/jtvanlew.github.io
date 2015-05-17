@@ -43,9 +43,9 @@ layout: default
                 </ul>
 
             </div>
+            <hr>
+            {% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
         </div>
-        <hr>
-        {% if site.disqus_shortname and page.comments == true %}{% include disqus.html %}{% endif %}
     </div>
 </article>
 
