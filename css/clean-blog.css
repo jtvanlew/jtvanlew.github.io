@@ -1,3 +1,7 @@
+.MathJax_Display{
+  color:#000000;
+}
+/*Frames an image into a circle*/
 .circle {
   display: block;
   width: 200px;
@@ -15,9 +19,13 @@
   width: 300px;
   height: 300px;
 }
+/*end frames an image into a circle*/
+
+/* used to add some apdding between the bottom of the page and teh footer */
 .row {
   padding-bottom:20px;
 }
+
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;

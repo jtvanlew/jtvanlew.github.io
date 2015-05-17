@@ -25,52 +25,70 @@ The first time I got it working on my (Ubuntu 12.04) machine at work, it took li
 
 Let's start from the very first step of pulling LIGGGHTS from the public git repository. You can get it here:
 
-```console
+{% highlight console %}
 git clone https://github.com/CFDEMproject/LIGGGHTS-PUBLIC.git ~/LIGGGHTS/LIGGGHTS-PUBLIC
-```
+{% endhighlight %}
 
 If you don't have `mpic++` installed already, you'll need it to build LIGGGHTS. You should do an `apt-get`, it's 
 
-    sudo apt-get install mpic++
+{% highlight console %}
+sudo apt-get install mpic++
+{% endhighlight %}
 
 Yours might be different and my expertise ends right there. With openmpi install, do a
 
-    cd ~/LIGGGHTS/LIGGGHTS-PUBLIC/src
+{% highlight console %}
+cd ~/LIGGGHTS/LIGGGHTS-PUBLIC/src
+{% endhighlight %}
 
 to get to the source directory. On Ubuntu 12.04, you can straight away do 
 
-	make clean-all
-	make fedora
+{% highlight console %}
+make clean-all
+make fedora
+{% endhighlight %}
 
 This should take a while. If there are errors really look at the error log. Almost always there is some line in the log that tells you exactly what went wrong and where. It's often hidden among pages and pages of junk that's frightening and confusing to people like me. But keep looking and you'll find out exactly what you need (sometimes it's something like gfortran not being present).
 
 All of that simply got your Ubuntu running with LIGGGHTS. Now we can get the Python wrapper working. This part is my contribution. from the source directory, navigate to the Make directory.
 
-	cd ~/LIGGGHTS/LIGGGHTS-PUBLIC/src/MAKE
+{% highlight console %}
+cd ~/LIGGGHTS/LIGGGHTS-PUBLIC/src/MAKE
+{% endhighlight %}
 
 In there, locate the file named `Makefile.fedora`. Either do a `vim` to open it or `gedit`. Locate the line that says `shflag` (in mine it is line 11) and make it say
 
-	shflag = -fPIC
+{% highlight console %}
+shflag = -fPIC
+{% endhighlight %}
 
 Now save the file, close it and change back to LIGGGHTS src directory
 
-	cd ..
+{% highlight console %}
+cd ..
+{% endhighlight %}
 
 You can create the library now that LAMMPS/LIGGGHTS needs for giving access to Python.
 
-	make makeshlib
-	make -f Makefile.shlib fedora
+{% highlight console %}
+make makeshlib
+make -f Makefile.shlib fedora
+{% endhighlight %}
 
 This might even take longer than the previous `make fedora` command. But once it's done you'll have a file named `liblammps_fedora.so` and `liblammps.so`. These will be used by Python. So to allow Python access, we need to inform the machine where they're located. With Ubuntu you can open your `.bashrc` file in your home directory and add the following two lines
 
-	export PYTHONPATH=$PYTHONPATH:/home/jon/LIGGGHTS/LIGGGHTS-PUBLIC/python
-	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jon/LIGGGHTS/LIGGGHTS-PUBLIC/src
+{% highlight console %}
+export PYTHONPATH=$PYTHONPATH:/home/jon/LIGGGHTS/LIGGGHTS-PUBLIC/python
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jon/LIGGGHTS/LIGGGHTS-PUBLIC/src
+{% endhighlight %}
 
 Note that my username is `jon` on that machine so you'll obviously need to replace that with your user.
 
 You now should be able to open python in the terminal and then test LAMMPS with a 
 
-	import lammps
+{% highlight console %}
+import lammps
+{% endhighlight %}
 
 command. Cross your fingers and hope that works. As a bonus, the way it's set up here, you can also download `pypar`, install it, and run LAMMPS in parallel with Python! I'm not 100% confident on the steps I used to get pypar running (though I'm _certain_ I have to make sure `openmpi1.5-bin` is used) so I don't want to give a walkthrough for that.
 
@@ -78,4 +96,6 @@ I hope this comes in handy for anyone else looking to use Python to avoid any of
 
 Update: I just went through the process on another computer at work and found the packages listed in the `pypar` readme were really all that were necessary to get it going if you've successfully done everything else above here. WITH TH EXCEPTION of needing specifically `openmpi1.5-bin`. These are the only packages you'd need:
 
-	sudo apt-get install openmpi1.5-bin libopenmpi-dev python-dev python-numpy
+{% highlight console %}
+sudo apt-get install openmpi1.5-bin libopenmpi-dev python-dev python-numpy
+{% endhighlight %}
