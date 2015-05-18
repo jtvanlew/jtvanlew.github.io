@@ -4,6 +4,7 @@ description: '& the art of over-engineering'
 ---
 
 {% for post in paginator.posts %}
+{% unless post.category == "test" %}
 <div class="post-preview">
     <div class="col-sm-2 col-md-3 col-lg-2 datetime">
         <span class="post-meta">
@@ -43,7 +44,7 @@ description: '& the art of over-engineering'
         <hr>
     </div>
 </div>
-
+{% endunless %}
 {% endfor %}
 
 <!-- Pager -->

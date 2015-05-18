@@ -39,6 +39,8 @@ links:
     url: /about
   - title: Travel Photos
     url: /photos/maps/
+  - title: Chinese Blog
+    url: /chinese
   # - title: Work
   #   url: /page/xively-temp/
 
@@ -118,6 +120,8 @@ prose:
               value: programming
             - name: "Brewing"
               value: brewing
+            - name: "Chinese"
+              value: chinese
           alterable: true
       - name: "tags"
         field:
@@ -144,11 +148,8 @@ prose:
           element: "checkbox"
           label: "Allow shoaring"
           value: true
-      - name: "chart"
-        field:
-          element: "checkbox"
-          label: "Add post to chart"
-          value: true
+
+
 
 # Build settings
 markdown: kramdown

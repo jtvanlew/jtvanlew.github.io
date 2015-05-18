@@ -25,7 +25,7 @@ The first time I got it working on my (Ubuntu 12.04) machine at work, it took li
 
 Let's start from the very first step of pulling LIGGGHTS from the public git repository. You can get it here:
 
-{% highlight console %}
+{% highlight console linenos %}
 git clone https://github.com/CFDEMproject/LIGGGHTS-PUBLIC.git ~/LIGGGHTS/LIGGGHTS-PUBLIC
 {% endhighlight %}
 
