@@ -26,4 +26,4 @@ Eva、Irene - 今年二月初，台灣動物緊急救援小組大隊長在執行
 
 如今這隻狗我非常愛。我每天要早一點回家跟她玩，跟她去散步一下。這個台灣土狗，我愛得甚至想要多收養一隻土狗，讓她有妹妹可以一起玩。如果你也想收養一隻台灣土狗，可以去savedogs.org英文網站，看到很多可憐的台灣土狗，給牠們一個新生活。請看一下台灣動物緊急救援小組的錄像：
 
-<iframe width="420" height="315" src="http://www.youtube.com/watch?v=nQ-odXXYNM0" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/nQ-odXXYNM0" frameborder="0" allowfullscreen></iframe>
