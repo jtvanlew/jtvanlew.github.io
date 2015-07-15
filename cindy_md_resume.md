@@ -1,4 +1,11 @@
-#Cynthia Chen
+---
+layout: page
+permalink: /about/cindy
+title: Cynthia Chen
+tags: []
+comments: true
+---
+
 2901 Peralta Oaks Court 3rd Floor, Oakland, CA 94605
 (510) 382-3300 • chchen@acgov.org
 
