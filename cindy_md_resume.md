@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /about/cindy
+permalink: /about/cindy.html
 title: Cynthia Chen
 tags: []
 comments: true
