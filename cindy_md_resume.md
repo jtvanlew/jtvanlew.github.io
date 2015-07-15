@@ -6,12 +6,12 @@ tags: []
 comments: true
 ---
 
-2901 Peralta Oaks Court 3rd Floor, Oakland, CA 94605
+2901 Peralta Oaks Court 3rd Floor, Oakland, CA 94605  
 (510) 382-3300chchen@acgov.org
 
 ##CURRENT POSITION
 Crime Lab Technician, Alameda County Sheriff’s Office Crime Laboratory, Oakland, CA
-July 2014 – present
+July 2014 – present  
 * Accept formal Criminalist training in Forensic Biology Unit (FBU)
 * Perform FBU critical equipment monthly and quarterly maintenance
 * Manage FBU critical and non-critical reagent and supplies inventory
