@@ -12,10 +12,10 @@ comments: true
 ##CURRENT POSITION
 Crime Lab Technician, Alameda County Sheriff’s Office Crime Laboratory, Oakland, CA
 July 2014 – present  
-* Accept formal Criminalist training in Forensic Biology Unit (FBU)
-* Perform FBU critical equipment monthly and quarterly maintenance
-* Manage FBU critical and non-critical reagent and supplies inventory
-* Prepare critical and non-critical reagents used in Serology and DNA analysis
+* Accept formal Criminalist training in Forensic Biology Unit (FBU) 
+* Perform FBU critical equipment monthly and quarterly maintenance 
+* Manage FBU critical and non-critical reagent and supplies inventory 
+* Prepare critical and non-critical reagents used in Serology and DNA analysis 
 * Perform quality control check in critical DNA commercial reagents and kits 
 * Maintain FBU lab environment
 * Assist in evidence receiving, transfer and release (occasional)
@@ -41,8 +41,8 @@ May 2013-present
 
 Volunteer, Los Angeles County Sheriff’s Department, Scientific Services Bureau, Downey, CA
 April 2014 – June 2014
-  * Perform evidence clerical review
-  * Update drug standard inventory database
+* Perform evidence clerical review
+* Update drug standard inventory database
 
 Student Intern, Los Angeles Police Department, Scientific Investigation Division, Los Angeles, CA
 June 2013 – September 2013
