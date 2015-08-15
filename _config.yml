@@ -7,7 +7,7 @@ share:            true
 dropcap:			true
 locale: en_US
 logo:             Molly_Small.png
-baseurl:        	  http://jon.vanlew.net/
+baseurl:        	
 
 
 avatar:         'jtvanlew.jpg'
