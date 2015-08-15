@@ -30,7 +30,7 @@ But when that "35mm tire" is put onto my 18mm Mavic Open rims, it only actually 
 
 This gives plenty of space around the frame. At the seat stay there's almost 10 mm of spacing on either side of the tire.
 
-![seat stay clearance](http://jon.vanlew.net/img/20150814/DSC_0489.JPG)
+![seat stay clearance](http://jon.vanlew.net/img/20150814/DSC_0488.JPG)
 
 The least amount of room was near the front derailler assembly. There was about 8~9 mm here
 
