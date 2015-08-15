@@ -20,28 +20,28 @@ Googling for "largest tire rear triangle SOMA Double Cross" gives pathetically f
 
 Right now I've got Schwalbe's 700x35c [Delta Cruiser](http://www.schwalbetires.com/bike_tires/road_tires/delta_cruiser_hs392). It fits no problem (the fenders are no longer on here but they always had plenty of clearance).
 
-![tire example 1]({{site.baseurl}}/img/20150814/DSC_0485.JPG)
+![tire example 1](http://jon.vanlew.net/img/20150814/DSC_0485.JPG)
 
-![tire example 2]({{site.baseurl}}/img/20150814/DSC_0486.JPG)
+![tire example 2](http://jon.vanlew.net/img/20150814/DSC_0486.JPG)
 
 But when that "35mm tire" is put onto my 18mm Mavic Open rims, it only actually measures about 33.2 mm -- fully inflated (to, I don't know, > 45 psi).
 
-![33.2mm tire measurement]({{site.baseurl}}/img/20150814/DSC_0487.JPG)
+![33.2mm tire measurement](http://jon.vanlew.net/img/20150814/DSC_0487.JPG)
 
 This gives plenty of space around the frame. At the seat stay there's almost 10 mm of spacing on either side of the tire.
 
-![seat stay clearance]({{site.baseurl}}/img/20150814/DSC_0489.JPG)
+![seat stay clearance](http://jon.vanlew.net/img/20150814/DSC_0489.JPG)
 
 The least amount of room was near the front derailler assembly. There was about 8~9 mm here
 
-![front derailler clearance]({{site.baseurl}}/img/20150814/DSC_0490.JPG)
+![front derailler clearance](http://jon.vanlew.net/img/20150814/DSC_0490.JPG)
 
 Clearance with the chain stay was again almost 10 mm
 
-![chain stay clearance]({{site.baseurl}}/img/20150814/DSC_0491.JPG)
+![chain stay clearance](http://jon.vanlew.net/img/20150814/DSC_0491.JPG)
 
 The clearance to the chain stay bridge (is that name of that little guy?) had plenty of clearance, almost 2 cm
 
-![chain stay bridge clearance]({{site.baseurl}}/img/20150814/DSC_0492.JPG)
+![chain stay bridge clearance](http://jon.vanlew.net/img/20150814/DSC_0492.JPG)
 
 Based on these measurements, it seems like I could go up to a 45mm tire but conservatively 42mm. Because my front fork is a Surly, and it's got clearance for days, I might go the route of buying a 45mm and if there's any rubbing, put that up front and try out the 42mm in back. Regardless, I'll edit this again/make a new post with sizes and fittings so others can avoid this headache in the future.
