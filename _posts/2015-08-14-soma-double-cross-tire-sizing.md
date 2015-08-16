@@ -5,13 +5,13 @@ description: fit check for rear tires in SOMA Double Cross
 headline: ""
 modified: ""
 categories: 
-  - bicycling
+  - bicycles
 tags: "SOMA, double cross, Schwalbe"
 imagefeature: ""
 mathjax: false
 comments: true
 share: true
-title: Soma Double Cross Tire Sizing
+title: SOMA Double Cross Tire Sizing
 ---
 
 ## Tire fit in rear triangle
