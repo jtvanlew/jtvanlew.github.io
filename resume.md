@@ -7,8 +7,5 @@ comments: true
 ---
 
 # Publications
-
-<div class="box">
-	<?php $contents = file_get_contents("http://bibbase.org/show?bib=http://bibbase.org/mendeley2/7058033&css=jon.vanlew.net/cv/css/bibbase.css"); print_r($contents); ?> 
-</div>
+<script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/7058033&jsonp=1"></script> 
 

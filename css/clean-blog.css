@@ -31,30 +31,10 @@ span.dontprint img {
     content: "\f08e  link ";
 }
 
-/*******************************************
-DEFAULT BOX
-*******************************************/
-.box{
-  margin-bottom: 15px;
-}
-.box h2{
-  color: #1E90FF;
-  font-size: 1.8em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.box h2:before{
-  content: '//';
-  margin-right: 5px;
-}
-.box p{
-  font-size: 1.3em;
-  line-height: 1.5em;
-}
 
-.MathJax_Display{
+/*.MathJax_Display{
   color:#000000;
-}
+}*/
 /*Frames an image into a circle*/
 .circle {
   display: block;
