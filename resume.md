@@ -7,6 +7,14 @@ comments: true
 ---
 <div class="circle large" style="background-image: url('{{ site.url }}/img/vanlew_profile.jpg')"></div>
 
+
+<div id="contact"></div>
+
+# Contact
+
+
+<div id="education"></div>
+
 # Academic
 
 
@@ -46,6 +54,117 @@ Mechanical Engineering, Minors in Art History and Mathematics.
 
 <hr>
 
+
+
+
+<!-- INDUSTRY -->
+<div id="industry"></div>
+
+#Industry history
+
+##TCR Group
+
+##2007
+
+### Technical content manager
+
+Phoenix, AZ
+
+Small company, 2 employees
+
+Generated all the operation and maintenance manuals for a water booster station of a new community in North Phoenix.
+
+##US Monolithics
+
+##2006 - 2007
+
+###Mechanical engineer
+
+Phoenix, AZ
+
+Medium company, ~50 employees
+
+Mechanical engineering design in support of advanced electrical engineering products. Package and PCB routing design.
+
+##Motorola
+
+##2004
+
+###Mechanical engineer intern
+
+Chandler, AZ
+
+Large company, >500 employees
+
+Maintenance of line (MOL) and product life management of Motorola's antenna base stations.
+
+<hr>
+<!-- TEACHING EXPERIENCE -->
+<div id="teaching"></div>
+
+#Teaching assistant history
+
+##UCLA
+
+##2010
+
+###Introduction to Engineering Thermodynamics
+
+##University of Arizona
+
+##2007
+
+###Introduction to Fluid Mechanics
+<hr>
+
+
+
+
+
+<!-- AWARDS -->
+
+<div id="awards"></div>
+
+#Honors and Awards
+
+2010 UCLA Research Fellowship
+
+2008 University of Arizona Graduate College Fellowship
+
+2008 Study Abroad Scholarship to study Chinese in Nanjing, China
+
+2007-2009 University of Arizona Graduate Scholarship
+
+2005 Graduated Cum Laude from the University of Arizona
+<hr>
+
+
+<!-- LANGUAGES -->
+<div id="languages"></div>
+
+#Languages
+
+Chinese (Mandarin)
+
+Spanish
+<hr>
+<!-- HOBBIES -->
+<!-- <div class="box">
+<h2>Hobbies</h2>
+<div class="hobby">Photography</div>
+<div class="hobby">Traveling</div>
+<div class="hobby">Homebrewing</div>
+<div class="hobby">Bicycling</div>
+<div class="hobby">Basketball</div>
+<div class="hobby">Programming</div>
+<hr>
+</div> -->
+
+
+
+
+
+<div id="publications"></div>
 
 # Publications
 <script src="http://bibbase.org/show?bib=http://jtvanlew.github.io/my_papers.bib&jsonp=1"></script> 
