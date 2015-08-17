@@ -1,3 +1,37 @@
+/*******************************************
+PUBLICATION LIST
+*******************************************/
+.bibbase_paper_title a {
+  font-size: 1.1em;
+  font-weight: 400;
+  font-weight: bold;
+}
+.bibbase_group {
+  /*font-size: 1.6em;*/
+  font-weight: normal;
+  background: #F0563D;
+  color: #fff;
+  font-style: normal;
+  text-shadow: none;
+}
+.bibbase_paper{
+  font-size: 1.1em;
+}
+.bibbase_paper_author{
+  /*font-size: 1.1em;*/
+}
+/*span.bibbase_paper_content {
+  background-image: url('../dreamlingsnewpic.png') !important; 
+}*/
+span.dontprint img {
+    display: none !important;
+}
+.bibbase_icon_text:before { 
+    font-family: FontAwesome;
+    content: "\f08e  link ";
+}
+
+
 .MathJax_Display{
   color:#000000;
 }
