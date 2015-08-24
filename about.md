@@ -5,11 +5,11 @@ title: Jon Thomas Van Lew
 tags: [jtvanlew, me]
 comments: true
 ---
-#About me (kind of)
+#About this site
 
-<div class="circle large" style="background-image: url('{{ site.url }}/img/vanlew_profile.jpg')"></div>
+My main home page can be found at [jon.vanlew.net](http://jon.vanlew.net). Because this one is with GitHub, it is theoretically easier for me to add posts -- even if I'm not at my native machine -- so the idea is to use it for dynamic pages like blogs while static pages of information reside at the main site.
 
-That's me and this is Molly, the eponymous little black dog:
+This is Molly, the eponymous little black dog:
 
 <div class="circle large" style="background-image: url('{{ site.url }}/img/page/about/molly-bw.jpg')"></div>
 
@@ -27,5 +27,3 @@ Perhaps you notice a peculiarity of the story. Like... the fact it's written in 
 
 I love this dog. I'm close to surviving life in grad school and I owe any of my remaining sanity to this girl. As thanks, I've named my site in her honor.
 
-#About this site
-The home page is for posts on brewing, engineering, etc. etc. Then there's the Photo Maps I made to show off my picture albums. Finally, there's a page that exists only for my own practice of writing Chinese.

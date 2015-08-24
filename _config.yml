@@ -29,16 +29,16 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: Home
+  - title: jon.vanlew.net
+    external: true
+    url: http://jon.vanlew.net
+  - title: Blog
     url: /
-    external: false
     icon: home
   - title: Categories
     url: /categories
   - title: About
     url: /about
-  - title: Travel Photos
-    url: /photos/maps/
   - title: Chinese Blog
     url: /chinese
   # - title: Work
