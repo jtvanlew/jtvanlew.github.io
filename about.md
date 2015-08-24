@@ -1,15 +1,12 @@
 ---
 layout: page
 permalink: /about/index.html
-title: Jon Thomas Van Lew
+title: About this site
 tags: [jtvanlew, me]
 comments: true
 ---
-#About this site
 
-My main home page can be found at [jon.vanlew.net](http://jon.vanlew.net). Because this one is with GitHub, it is theoretically easier for me to add posts -- even if I'm not at my native machine -- so the idea is to use it for dynamic pages like blogs while static pages of information reside at the main site.
-
-This is Molly, the eponymous little black dog:
+My main home page can be found at [jon.vanlew.net](http://jon.vanlew.net). Because this one is with GitHub, it is theoretically easier for me to add posts -- even if I'm not at my native machine -- so the idea is to use it for dynamic pages like blogs while static pages of information reside at the main site. Yes, "In theory"... Anyway, This is Molly, the eponymous little black dog:
 
 <div class="circle large" style="background-image: url('{{ site.url }}/img/page/about/molly-bw.jpg')"></div>
 
