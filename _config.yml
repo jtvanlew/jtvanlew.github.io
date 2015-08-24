@@ -39,10 +39,6 @@ links:
     url: /categories
   - title: About
     url: /about
-  - title: Chinese Blog
-    url: /chinese
-  # - title: Work
-  #   url: /page/xively-temp/
 
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
