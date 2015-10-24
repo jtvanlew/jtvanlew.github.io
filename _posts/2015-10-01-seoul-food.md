@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 description: "walking through my stomach's tour of Seoul"
 headline: ""
 modified: ""
