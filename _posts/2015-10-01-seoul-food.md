@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 description: "walking through my stomach's tour of Seoul"
 headline: ""
 modified: ""
@@ -86,6 +86,7 @@ I came to discover that, for me, bibimbap without egg is like pizza without chee
 
 ## No. 2: Soon tofu
 ![DSC_0782.jpg]({{site.baseurl}}/images/DSC_0782.jpg)
+
 Did I mention earlier that I love the [soon tofu restaurant](www.tofuya.la) near my house in LA? Because I love the soon tofu restaurant near my house in LA. My roommate told me that when he went to Seoul he tried a few soon tofu restaurants thinking they would be some fantastic authentic shit but he still preferred our Tofu-ya in LA. So I made it a point to try as much soon tofu stew as I could while in Korea. I received an interesting soon tofu education -- and the stew remained with a strong showing in the top 3 of my stupid list of delicious Korean food.
 
 ![DSC_0828.jpg]({{site.baseurl}}/images/DSC_0828.jpg)
