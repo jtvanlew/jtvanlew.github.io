@@ -133,6 +133,7 @@ I hope you enjoyed this trip through Korean cuisine as written by a guy who know
 
 ## Double bonus, my food itinerary in Seoul
 By: 존 토마스 반 루
+
 ### Day 0:
 
  * gearanmali(egg roll)
