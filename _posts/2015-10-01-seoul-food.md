@@ -14,6 +14,7 @@ share: true
 title: Seoul food
 ---
 
+
 I had a trip to South Korea in September, for a fusion engineering conference on Jeju Island ([my work was... OK](http://www.mae.ucla.edu/jon-van-lew-wins-best-student-award-at-isfnt/)). 
 
 After the conference I took a side trip to Seoul to visit some old Korean friends I hadn't seen since 2008. Back in '08, we were all studying Chinese at Nanjing Normal University in neighboring classrooms and we quickly became friends. As a small group we would go out to eat together practically every day -- often to Korean-style restaurants around Nanjing. That was my first introduction to Korean food and I was immediately in love with it -- at that time it was bibimbop that ruled over all.
@@ -82,12 +83,12 @@ But the point is, K-BBQ is always good no matter what meat you order! Just make 
 ## No. 3: Bibimbap
 I had previously been under the impression that bibimbap is a specific dish. But I came to learn from The Koreans that its actually a general term for "mix lots of stuff with rice in a bowl and its great" (loosely translated by myself). This explains the variation of bibimbap I had throughout Korea. Some restaurants had thin, small slices of raw beef on top, many would serve with an egg though that certainly wasn't standard, one actually had no rice at all and was just kind of a salad, and in some cases it even had noodles and some soup! I will admit that some varieties were not exactly my cup of tea, but when I liked it, I loved it.
 
-I came to discover that, for me, bibimbap without egg is like pizza without cheese -- it's just unacceptable. Second most important in the bibimbap is the salty kim seaweed. Third is finding your perfect mixture of rice and red hot sauce. You get those critical ingredients together and mix them with the other random junk you find, and it's going to be a good breakfast/lunch/dinner. Guaranteed.
+I also discovered that, for me, bibimbap without egg is like pizza without cheese -- it's just unacceptable. Second most important in the bibimbap is the salty kim seaweed. Third is finding your perfect mixture of rice and red hot sauce. You get those critical ingredients together and mix them with the other random junk you find, and it's going to be a good breakfast/lunch/dinner. Guaranteed.
 
 ## No. 2: Soon tofu
 ![DSC_0782.jpg]({{site.baseurl}}/images/DSC_0782.jpg)
 
-Did I mention earlier that I love the [soon tofu restaurant](www.tofuya.la) near my house in LA? Because I love the soon tofu restaurant near my house in LA. My roommate told me that when he went to Seoul he tried a few soon tofu restaurants thinking they would be some fantastic authentic shit but he still preferred our Tofu-ya in LA. So I made it a point to try as much soon tofu stew as I could while in Korea. I received an interesting soon tofu education -- and the stew remained with a strong showing in the top 3 of my stupid list of delicious Korean food.
+Did I mention earlier that I love the [soon tofu restaurant](www.tofuya.la) near my house in LA? Because I love the soon tofu restaurant near my house in LA. My roommate told me that when he went to Seoul he tried a few soon tofu restaurants thinking they would be some fantastic authentic shit but he still preferred our Tofu-ya in LA. So I made it a point to try as much soon tofu stew as I could while in Korea and I did receive an interesting soon tofu education. The stew remains with a strong showing in the top 3 of my stupid list of delicious Korean food.
 
 ![DSC_0828.jpg]({{site.baseurl}}/images/DSC_0828.jpg)
 
@@ -100,7 +101,7 @@ I was taken to an unassuming little restaurant tucked away on a sidestreet near 
 
 ![DSC_1006.jpg]({{site.baseurl}}/images/DSC_1006.jpg)
 
-When Sunny, Sara, and Angie began digging into it, I was even more confused. There appeared to be some wavy ramen noodles and maybe even sweet potato noodles (a la japchae). On top of that was cheese (!!?) and some korean dumplings. Not to mention floating throughout the spicy soup was a decent amount of dduk. It was the most mash-up looking dish I'd seen -- even compared to the random assortment of stuff in bibimbap.
+When Sara, Angie, and Sunny began digging into it, I was even more confused. There appeared to be some wavy ramen noodles and maybe even sweet potato noodles (a la japchae). On top of that was cheese (!!?) and some korean dumplings. Not to mention floating throughout the spicy soup was a decent amount of dduk. It was the most mash-up looking dish I'd seen -- even compared to the random assortment of stuff in bibimbap.
 
 ![DSC_1011.jpg]({{site.baseurl}}/images/DSC_1011.jpg)
 
@@ -108,7 +109,9 @@ But oh my good god was this a delicious bowl of creamy goo. The combination of c
 
 ![12047811_10207726591627283_1071933372_n.jpg]({{site.baseurl}}/images/12047811_10207726591627283_1071933372_n.jpg)
 
-THEN!! You think you're done once you clean the first bowl but the waiter whisk away the bowl in order to fry rice with the remaining chunks of flavor stuck to the bottom! The rice was also mixed with some of that delicious salty seaweed that makes bibimbap so delightful. So when I thought I was good and full and satisfied from the soup-version, that rice just comes in with a haymaker and knocks you out. Man just writing about it is making me drool again.
+THEN!! You think you're done once you take care of the soup, but the waiter whisks away the bowl in order to fry rice with the remaining chunks of flavor stuck to the bottom! The rice was also mixed with some of that delicious salty seaweed that makes bibimbap so delightful. So when I thought I was good and full and satisfied from the soup-version, that rice just comes in with a haymaker and knocks you out. 
+
+... Just writing about it is making me drool again.
 
 ![DSC_1014.jpg]({{site.baseurl}}/images/DSC_1014.jpg)
 
@@ -173,4 +176,4 @@ By: 존 토마스 반 루
  * jeju samgyapsal
  * beer-battered potato chips + beer
  * banana snack
- * donggrangddaeng 
+ * donggrangddaeng
