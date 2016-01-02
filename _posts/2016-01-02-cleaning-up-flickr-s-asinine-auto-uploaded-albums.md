@@ -32,50 +32,40 @@ You'll end up with flickr giving you an api key and api secret.
 ### Step 2: Set up flickr_api
 You can use pip to install flickr_api. Once installed, you've got to authenticate with flickr in Python. Specifically, we need to tell flickr that this script is going to have the permissions to delete -- so we can delete the photosets, obvs.
 
-```python
-import flickr_api
-api_key = 'key_from_flickr'
-api_secret = 'secret_from_flickr'
-a = flickr_api.auth.AuthHandler() #creates the AuthHandler object
-perms = "delete" # set the required permissions
-url = a.get_authorization_url(perms)
-print(url)
-```
+    import flickr_api
+    api_key = 'key_from_flickr'
+    api_secret = 'secret_from_flickr'
+    a = flickr_api.auth.AuthHandler() #creates the AuthHandler object
+    perms = "delete" # set the required permissions
+    url = a.get_authorization_url(perms)
+    print(url)
 
 then go to the url printed out and flickr will ask if you want to authorize. you OK it and then it'll give you some xml data in your browser. Find this line: `<oauth_verifier>my_auth_code</oauth_verifier>` (where obviously my_auth_code is a set of random letters and numbers...) and then we can auth with flickr and save the authentication so we don't need to do the above again...
 
-```python
-a.set_verifier("my_auth_code")
-a.save('authed_flickr')
-```
+    a.set_verifier("my_auth_code")
+    a.save('authed_flickr')
 
 ### Step 3: Load auth'ed file and get those albums!
 Now that the file is saved the only code we need to run in our script from now on is
 
-```python
-import flickr_api
-flickr_api.set_auth_handler('authed_flickr')
-user = flickr_api.test.login()
-```
+    import flickr_api
+    flickr_api.set_auth_handler('authed_flickr')
+    user = flickr_api.test.login()
 
 where the last line just gives us user for the case when we've already authenticated (which we have, with the 'authed_flickr' file). We can then get a whole list of our photosets with
 
-```python
-photosets = user.getPhotosets()
-```
+	photosets = user.getPhotosets()
 
 If you check the type of photosets you'll see its a `flickr_api.objects.FlickrList`. So you can iterate through all the photosets and print them out with a simple
 
-```python
-for photoset in photosets:
-	print(photoset['title'])
-```
+    for photoset in photosets:
+        print(photoset['title'])
 
 ### Step 4: Figure out how to delete your garbage albums
 
 At this point, you need to come up with your own clever solution for deleting the albums you no longer want. For me, I was lucky in that 989 of the 994 albums I didn't want were all in the standard expression of "yyyy-mm-dd". So all I needed to do was a crude loop through years and then delete any album whose name begins with that. In other words, I did this:
 
-```python
+
     import numpy as np
     for N in np.arange(2001, 2016):
         photosets = user.getPhotosets()
@@ -83,7 +73,7 @@ At this point, you need to come up with your own clever solution for deleting th
             if photoset['title'][0:5] == u'%s-'%(N):
                 photoset.delete()
                 print('deleting photoset '+photoset['title'])
-```
+
 
 This may not have been the most elegant loop through all my photosets but it worked. After only a few minutes, 99.5% of the damned albums had been deleted. Any album that didn't fit that format was then easily deleted one-by-one via it's name with a similar loop.
 
