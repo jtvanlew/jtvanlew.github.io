@@ -76,13 +76,13 @@ for photoset in photosets:
 At this point, you need to come up with your own clever solution for deleting the albums you no longer want. For me, I was lucky in that 989 of the 994 albums I didn't want were all in the standard expression of "yyyy-mm-dd". So all I needed to do was a crude loop through years and then delete any album whose name begins with that. In other words, I did this:
 
 ```python
-import numpy as np
-for N in np.arange(2001, 2016):
-	photosets = user.getPhotosets()
-	for photoset in photosets:
-		if photoset['title'][0:5] == u'%s-'%(N):
-			photoset.delete()
-			print('deleting photoset '+photoset['title'])
+    import numpy as np
+    for N in np.arange(2001, 2016):
+        photosets = user.getPhotosets()
+        for photoset in photosets:
+            if photoset['title'][0:5] == u'%s-'%(N):
+                photoset.delete()
+                print('deleting photoset '+photoset['title'])
 ```
 
 This may not have been the most elegant loop through all my photosets but it worked. After only a few minutes, 99.5% of the damned albums had been deleted. Any album that didn't fit that format was then easily deleted one-by-one via it's name with a similar loop.
