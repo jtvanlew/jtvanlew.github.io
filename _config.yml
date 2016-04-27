@@ -118,6 +118,8 @@ prose:
               value: brewing
             - name: "Chinese"
               value: chinese
+            - name: "KCRW"
+              value: kcrw
           alterable: true
       - name: "tags"
         field:
@@ -150,7 +152,7 @@ prose:
 # Build settings
 markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

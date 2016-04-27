@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Switzerland photos
-category: Travel
 comments: true
 share: true
 chart: true

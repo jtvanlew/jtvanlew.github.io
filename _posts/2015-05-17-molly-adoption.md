@@ -3,7 +3,8 @@ layout: post
 author: 方志宁
 title: "Molly's adoption"
 tags: "Molly"
-category: chinese
+categories: 
+  - chinese
 comments: true
 share: true
 published: true

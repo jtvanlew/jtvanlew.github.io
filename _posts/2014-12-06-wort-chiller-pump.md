@@ -8,7 +8,7 @@ share: true
 chart: true
 description: "and the art of over-engineering"
 categories: 
-  - Brewing
+  - brewing
 tags: 
   - [wort chiller]
   - homebrewing 

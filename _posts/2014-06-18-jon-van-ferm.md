@@ -5,7 +5,6 @@ description: energy balance
 tags: 
   - homebrew
   - engineering
-category: Brewing
 lang: en
 mathjax: true
 comments: true
@@ -13,7 +12,7 @@ share: true
 chart: true
 published: true
 categories: 
-  - Brewing
+  - brewing
 ---
 
 <div id="wrapper" style="width:100%; text-align:center">
