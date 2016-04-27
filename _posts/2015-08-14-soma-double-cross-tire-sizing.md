@@ -5,7 +5,7 @@ description: fit check for rear tires in SOMA Double Cross
 headline: ""
 modified: ""
 categories: 
-  - bicycles
+  - bicycling
 tags: "SOMA, double cross, Schwalbe"
 imagefeature: ""
 mathjax: false
