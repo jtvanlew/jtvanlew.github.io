@@ -15,7 +15,7 @@ tags:
   - "engineering"
 ---
 
-Big edit: After sharing this I had the sudden panic that I forgot to mention the gigantic assumption that **I'm only looking at the sensible heat of the system**, which is why I can treat the energy equations in terms of temperature (and not, say, enthalpy). That assumption makes the equations tractable but also puts a fairly significant limit to the applicaption of the results. Namely if ice were in the cold bath (which is quite common), the latent heat of melting would keep the cold bath cold for much longer than this analysis would otherwise predict. Anyway, this analysis was done for the sake of curiosity so its results stand as they do.
+Big edit: After sharing this I had the sudden panic (because, of course, this post has such a huge impact on the world) that I forgot to mention the gigantic assumption that **I'm only looking at the sensible heat of the system**, which is why I can treat the energy equations in terms of temperature (and not, say, enthalpy). That assumption makes the equations tractable but also puts a fairly significant limit to the application of the results. Namely if ice were in the cold bath (which is quite common), the latent heat of melting would keep the cold bath cold for much longer than this analysis predicts. Anyway, this analysis was done for the sake of curiosity so its results stand as they do.
 
 At the new apartment, my brewing has gone outdoors to the back patio. The patio drains off onto the cars parked below the patio, so running an open loop of water through my wort chiller isn't an option anymore. Not even to mention the ethics of dumping gallons of water during a drought.
 
@@ -30,7 +30,7 @@ In a really simplified sense, the hot wort and cold bath can be treated as coupl
 
 ![wort chiller schematic](/img/post/wort_chiller.png)
 
-For this problem the cold fluid is all at $T_c$ whether its in the bath or in the transfer line. Same goes for the hot wort and hot end of the transfer line. Doing any open, transient energy balance on the two baths yields the simple coupled system of ODEs:
+For this problem the cold fluid is all at $T_c$ whether its in the bath or in the transfer line. Same goes for the hot wort and hot end of the transfer line. Doing an open, transient energy balance on the two baths yields the simple coupled system of ODEs:
 
 $$
 \begin{equation}
@@ -47,7 +47,7 @@ $$
 \end{equation}
 $$
 
-The vector-form of the simple ODE is solved in the same method as we would a classical first order ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). In other words, we can assume the solution is of some form (exponential) and then where the time constant in the exponential growth/decay comes from eigenvalues of the problem. For this system of equations, we find not only the eigenvalues but eigenvectors.
+The vector-form of the simple ODE is solved in the same method as we would a classical first order ODE. Good detail can be found [on this site](http://tutorial.math.lamar.edu/Classes/DE/SolutionsToSystems.aspx). In other words, we can assume the solution is of some form (exponential) where the time constant in the exponential growth/decay comes from eigenvalues of the problem. For this system of equations, we find not only the eigenvalues but eigenvectors.
 
 The two eigenvalues are $\lambda_1 = 0$ and $\lambda_2 = -(\dot{m}/m_b + \dot{m}/m_c)$. The corresponding eigen vectors are
 
@@ -76,7 +76,7 @@ $$
 
 where $\Delta T_i$ is just the difference in temperatures of the two baths at the initial condition. I'll define the ratio of hot-cold baths as a dimensionless parameter $\alpha$. When $\alpha < 1$, the hot bath is being cooled by a larger mass of cold water. Vice versa for $\alpha > 1$. 
 
-I want to clean up the solution a little so I'll introduce another term, $\tau$ which I'll consider as the time constant for the system. It'll be defined as $\tau = \frac{m_b}{\dot{m}}$ -- which can be thought of as how long does it take to move one hot bath's worth of mass through the transfer lines. Finally, the solutions, when broken out of vector form, are
+I want to clean up the solution a little so I'll introduce another term, $\tau$ which I'll consider as the time constant for the system. It'll be defined as $\tau = \frac{m_b}{\dot{m}}$. This time can be thought of as how long it takes to move one hot bath's worth of mass through the transfer lines. Finally, the solutions, when broken out of vector form, are
 
 $$
 \begin{equation}
@@ -86,7 +86,7 @@ T_c(t) = T_{b,i} - \left(\frac{\Delta T_i}{1+\alpha}\right)\left[1+\alpha e^{-(1
 $$
 
 ### Short equation discussions
-I'd like to actually pause to look at the solutions of the hot and cold bath temperatures. As a logic check, I want to see how the solutions look as $t\rightarrow \infty$ -- or in other words, steady state. For the hot bath we're left with 
+I'd like to actually pause to look at the solutions of the hot and cold bath temperatures. As a logic check, I want to see how the solutions look as $t\rightarrow \infty$; or in other words, steady state. For the hot bath we're left with 
 
 $$
 \begin{equation}
@@ -94,7 +94,7 @@ T_b = T_{b,i} - \frac{\Delta T_i}{1+\alpha}
 \end{equation}
 $$
 
-For the simple case of when $\alpha = 1$ (aka equal sizes of hot and cold tanks), the final temperature of the hot reservoir is simply $$T_b = T_{b,i}/2 + T_{c,i}/2$$ -- or the average value of the initial temperatures. This is exactly what we should have expected so it's good that it worked out.
+For the simple case of when $\alpha = 1$ (aka equal sizes of hot and cold tanks), the final temperature of the hot reservoir is simply $$T_b = T_{b,i}/2 + T_{c,i}/2$$: the average value of the initial temperatures. This is exactly what we should have expected so it's good that it worked out.
 
 I also would like to point out that this steady state temperature is not at all a function of the pump flowrate. It's simply a mass-weighted average for temperature based on the sizes of my two tanks. The only place the flowrate does come in to play is in the exponential term -- it dictates how quickly the system will reach the steady state / equilibrium.
 
@@ -133,7 +133,7 @@ I must note, though, that I haven't thought at all about how effective the physi
 
 ## Conclusions.... kind of
 
-Now... what does any of thise have to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperature about a minute faster -- given all the assumptions of my energy balance. Those flowrates are given by the pump description but I doubt I'd reach those values when its connected to the long copper coil of the wort chiller, and its concomitant pressure drop. Considering that I titled this "wort chiller pump" and not "wort chiller cold volume", I think the most important thing these equations highlight is how much more dependent the results are on the cold water volume than any aspect of the pump flowrate. You're not going to get anywhere unless your cold water volume is almost 3 times larger than hot. That's pretty interesting.
+Now... what does any of this have to do with buying a pump? Well, not much. The difference between an 80 gph pump and a 158 gph pump (at twice the price) would be hitting pitching temperature about a minute faster -- given all the assumptions of my energy balance. Those flowrates are given by the pump description but I doubt I'd reach those values when its connected to the long copper coil of the wort chiller, and its concomitant pressure drop. I think the most important thing these equations highlight is how much more dependent the results are on the cold water volume than any aspect of the pump flowrate. If you don't have ice in the system, you're not going to get anywhere unless your cold water volume is almost 3 times larger than hot. That's pretty interesting.
 
 ## Code
 I wrapped up the equations in some pert little code, reproduced here for posterity
