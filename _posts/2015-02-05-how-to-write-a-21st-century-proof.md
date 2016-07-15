@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: How to Write a 21st Century Proof
 mathjax: true
 comments: true
