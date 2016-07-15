@@ -6,7 +6,7 @@ tags: [jtvanlew, me]
 comments: true
 ---
 
-While my 'professional', more static site can be found at [jon.vanlew.net](http://jon.vanlew.net), this site is supposed to be easier to blog through with GitHub's Jekyll implementation. I never have anything interesting to say, but I still sometimes post here. The blog is named after my beauitful dog, Molly. This is Molly, the eponymous little black dog:
+While my 'professional', more-static site can be found at [jon.vanlew.net](http://jon.vanlew.net), what you're looking at now is supposed to be easier to blog through with GitHub's Jekyll implementation. I never have anything interesting to say, but I still sometimes post here. The blog is named after my beauitful dog, Molly. This is Molly, the eponymous little black dog:
 
 <div class="circle large" style="background-image: url('{{ site.url }}/img/page/about/molly-bw.jpg')"></div>
 
