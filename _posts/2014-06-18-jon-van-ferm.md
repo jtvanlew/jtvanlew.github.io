@@ -20,11 +20,11 @@ categories:
 </div>
 <br />
 
-The problem of tiny apartment space and controlled brewing is a problem I'm intimately familiar with here in LA as a grad student. Having naturally constant temperatures for two weeks *seems* like it wouldn't be a problem here but I always run into gigantic temperature swings whenever I throw the wort into the fermenter. My approach thus far has followed along these steps:
+The problem of tiny apartment space and controlled brewing is a major problem for this poorly paid grad student in an expensive part of town. Having naturally constant temperatures for two weeks *seems* like it wouldn't be a problem for LA, but I always run into gigantic weather and temperature swings whenever I throw the wort into the fermenter. My approach thus far has followed along these steps:
 
 1. deal with it.
 
-Which, while beautiful in its simplicity, doesn't always yield the most optimum deliciousness of beer. Then I saw a kickstarter for the [BrewJacket](http://www.brewjacket.com/). I found it to be a pretty simple solution that I could totally steal the design of. I know of some pretty low power peltier coolers that I hadn't ever considered being strong enough for keeping beer cool. I thought I would compare some of the stats given in the BrewJacket kickstarter to see how much power they must be removing with their device. On their page, it said
+Which, while beautiful in its simplicity, doesn't always yield optimum deliciousness in my beer. Then I saw a kickstarter for the [BrewJacket](http://www.brewjacket.com/) which is meant to specifically address problems like mine. So I totally thought I could steal it. Without having thought too hard about it before, I had thought low-power Peltier coolers wouldn't be enough to chill 5 gallons of wort, but the BrewJacket must have been using something similar given the footprint of the design. So I thought I would compare some of the stats given in the BrewJacket kickstarter to see how much power they must be removing with their device. On their page, it said
 
 > Immersion can bring your beer down to 35º F below ambient in a matter of days and hold it there for as long as it is plugged into the wall.
 
@@ -55,7 +55,7 @@ Q_\text{out} & = & 7 ~\text{J/s}
 \end{eqnarray}
 $$
 
-Dude. 7 W? That's easy! But, yeah, you're right, the fermenter walls won't be adiabatic so let's add a design margin. Let's say we need 20 W of cooling. I think even cheap-o peltier thermoelectrics can pull 20 W. Since I had precisely such cheap-o peltier, I kinda hacked together some hardware with a flat bar of stainless, an old cpu heat sink, and a peltier sandwiched in the middle. My arduino + a relay got a 20 V power supply onto the thermoelectric. 
+Dude. 7 W? That's easy! But since real fermenter walls won't be adiabatic, I'll throw on a huge design margin. Let's say we need 20 W of cooling. I think even cheap-o peltier thermoelectrics can pull 20 W. Since I had precisely such cheap-o peltier, I kinda hacked together some hardware with a flat bar of stainless, an old cpu heat sink, and a peltier sandwiched in the middle. My arduino + a relay got a 20 V power supply onto the thermoelectric. 
 
 What you see in that image at the top is the first trial run of the whole assembly. I must admit it didn't work that well at first. There was too much stainless steel rod exposed and interacting with the room's air. Some insulation wrapped around that would force more energy interaction with the liquid it's immersed in.
 
