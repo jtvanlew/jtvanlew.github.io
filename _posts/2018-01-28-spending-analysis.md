@@ -23,72 +23,72 @@ Some unnecessary background: I finished my PhD in mid-2016 and was hired as a po
 I've clumped lots of sub-categories into some major bins to make this large-scale view a little more digestable. Here's the main categories and the sub-categories
 
 * Rent, Bills, & Fees
- - Mortgage & Rent
- - Website Hosting
- - Mobile Phone
- - Utilities 
- - Laundry
- - Home Services
- - Bank Fee
- - Service Fee
- - Tuition
- - Shipping
+  - Mortgage & Rent
+  - Website Hosting
+  - Mobile Phone
+  - Utilities 
+  - Laundry
+  - Home Services
+  - Bank Fee
+  - Service Fee
+  - Tuition
+  - Shipping
 * Eating & Drinking
- - Groceries
- - Eating Out
- - Alcohol & Bars
- - Coffee Shops
+  - Groceries
+  - Eating Out
+  - Alcohol & Bars
+  - Coffee Shops
 * Auto related
- - Parking
- - Parking Ticket
- - Traffic ticket
- - Auto Insurance
- - Auto Registration
- - Gas & Fuel
- - Service & Parts
- - Public Transportation
- - Rental Car & Taxi
+  - Parking
+  - Parking Ticket
+  - Traffic ticket
+  - Auto Insurance
+  - Auto Registration
+  - Gas & Fuel
+  - Service & Parts
+  - Public Transportation
+  - Rental Car & Taxi
 * Travel
- - Air Travel
- - Travel Excursions
- - Food and Drink
- - Hotel
+  - Air Travel
+  - Travel Excursions
+  - Food and Drink
+  - Hotel
 * Entertainment & Fun
- - Hobbies
- - Electronics & Software
- - Clothing
- - Bicycle stuff
- - Books
- - Music
- - Movies & DVDs
- - Entertainment
- - Sports
- - Sports Tickets
- - Amusement
- - Arts
+  - Hobbies
+  - Electronics & Software
+  - Clothing
+  - Bicycle stuff
+  - Books
+  - Music
+  - Movies & DVDs
+  - Entertainment
+  - Sports
+  - Sports Tickets
+  - Amusement
+  - Arts
 * Buying stuff
- - Home Improvement
- - Home Supplies
- - Shopping
- - Cash & ATM
+  - Home Improvement
+  - Home Supplies
+  - Shopping
+  - Cash & ATM
 * Vanguard retirement
- - post-tax contributions to Vanguard IRA
+  - post-tax contributions to Vanguard IRA
 * Gifts & Christmas
- - Charity
- - Christmas
- - Gifts 
- - Souvenirs
+  - Charity
+  - Christmas
+  - Gifts 
+  - Souvenirs
 * Pets
- - Pet Food & Supplies
- - Veterinary
- - Boarding
+  - Pet Food & Supplies
+  - Veterinary
+  - Boarding
 * Health & Fitness
- - Dentist
- - Eyecare
- - Gym membership
- - Haircuts
- - Pharmacy
- - Spa & Massage
+  - Dentist
+  - Eyecare
+  - Gym membership
+  - Haircuts
+  - Pharmacy
+  - Spa & Massage
 
 # Total spending over the last two years
 
