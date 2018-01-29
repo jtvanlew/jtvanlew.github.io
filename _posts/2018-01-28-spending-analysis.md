@@ -92,9 +92,9 @@ I've clumped lots of sub-categories into some major bins to make this large-scal
 
 # Total spending over the last two years
 
-<iframe width="600" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1339016077&amp;format=interactive"></iframe>
+<iframe width="700" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1339016077&amp;format=interactive"></iframe>
 
-<iframe width="600" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1985813660&amp;format=interactive"></iframe>
+<iframe width="700" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1985813660&amp;format=interactive"></iframe>
 
 The most obvious trend is that rent & bills are always the biggest offenders and the student loan payback period beginning in January of 2017 effectively doubled my spending rate in that category. Following that, most of my money was spent on Food (which included money spent eating out and at the bars) and transportation-related expenses.
 
@@ -102,44 +102,44 @@ The most obvious trend is that rent & bills are always the biggest offenders and
 
 As far as income during these two years (looking at post-tax and post-401k paychecks)... in 2016 you can see the major bump in pay between grad student salary and post-doc (even though I was actually being paid fairly well as a phd student during my last year in the lab). In 2017 there's a little dip between my last paycheck at UCLA and the first with NantWorks. In all, it's a rather unimpressive income chart.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1717237251&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1717237251&amp;format=interactive"></iframe>
 
 ## Rent, Bills, & Fees
 Bills & Utilities, Website Hosting, Mobile Phone, Utilities, Mortgage & Rent, Laundry, Home Services, Bank Fee, Service Fee, Tuition, Shipping
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=381165319&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=381165319&amp;format=interactive"></iframe>
 
 ## Eating & Drinking
 Alcohol & Bars, Coffee Shops, Eating Out, Groceries
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=661023995&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=661023995&amp;format=interactive"></iframe>
 
 ## Auto related
 Traffic ticket, Auto Insurance, Auto Registration, Gas & Fuel, Service & Parts, Parking, Parking Ticket, Public Transportation, Rental Car & Taxi
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=236104501&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=236104501&amp;format=interactive"></iframe>
 
 ## Travel
 Air Travel, Travel Excursions, Food and Drink, Hotel
-<iframe width="636.388140161725" height="393.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=208589149&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=208589149&amp;format=interactive"></iframe>
 
 ## Entertainment & Fun
 Hobbies, Electronics & Software, Clothing, Bikes, Books, Music, Movies & DVDs, Entertainment, Sports, Sports Tickets, Amusement, Arts
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1708866080&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1708866080&amp;format=interactive"></iframe>
 
 ## Buying stuff
 Home Improvement, Home Supplies, Shopping, Cash & ATM, ATM Fee
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1441697101&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1441697101&amp;format=interactive"></iframe>
 
 ## Vanguard retirement
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1784498439&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1784498439&amp;format=interactive"></iframe>
 
 ## Gifts & Christmas
 Charity, Christmas, Gift, Souvenirs/Gifts
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1475053470&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1475053470&amp;format=interactive"></iframe>
 
 ## Pets
 Pet Food & Supplies, Veterinary, Boarding
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=862717947&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=862717947&amp;format=interactive"></iframe>
 
 ## Health & Fitness
 Dentist, Eyecare, Gym, Haircuts, Pharmacy, Spa & Massage
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=600786213&amp;format=interactive"></iframe>
+<iframe width="700" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=600786213&amp;format=interactive"></iframe>
 
