@@ -92,9 +92,9 @@ I've clumped lots of sub-categories into some major bins to make this large-scal
 
 # Total spending over the last two years
 
-<iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1339016077&amp;format=interactive"></iframe>
+<iframe width="600" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1339016077&amp;format=interactive"></iframe>
 
-<iframe width="00" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1985813660&amp;format=interactive"></iframe>
+<iframe width="600" height="700" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAII34AEPbgzoHEs_mHsJ-1ZBJQz_3uge-55TVg3xT5-I570p9Dbu2VlnrKcpFSs_W9ILlDEd6ir4_/pubchart?oid=1985813660&amp;format=interactive"></iframe>
 
 The most obvious trend is that rent & bills are always the biggest offenders and the student loan payback period beginning in January of 2017 effectively doubled my spending rate in that category. Following that, most of my money was spent on Food (which included money spent eating out and at the bars) and transportation-related expenses.
 
