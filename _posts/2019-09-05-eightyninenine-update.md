@@ -12,7 +12,7 @@ mathjax: false
 comments: true
 share: true
 title: EightyNineNine.com UPDATE!
-
+---
 ## D3 & speed upgrades to Eightyninenine.com
 
 After 3 or 4 years of leaving it to its own devices, I finally had the time to do some major fixes to [eightyninenine.com](http://www.eightyninenine.com). Important changes:
