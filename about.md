@@ -15,7 +15,7 @@ Molly and her sister were found abandoned near a pig farm in southern Taiwan wit
 Here's Molly a few days after she arrived in Los Angeles, 
 <figure>
 	<img src="{{ site.url }}/img/page/about/molly-young.jpg" alt="young Molly">
-	<figcaption>Molly soon after arriving from Taiwan</figcaption>
+	<div class="figcaption">Molly soon after arriving from Taiwan</div>
 </figure>
 I love this dog and I owe any of my remaining sanity to this girl. If not for her, I'd have been significantly more miserable through my PhD program.
 
@@ -23,33 +23,33 @@ I love this dog and I owe any of my remaining sanity to this girl. If not for he
 Molly continues to be my most coddled baby.
 <figure>
 	<img src="{{ site.url }}/img/page/about/DSC_0684.jpg" alt="Me and Molly swinging">
-	<figcaption>Me and Molly on a swingset outside Big Bear Lake</figcaption>
+	<div class="figcaption">Me and Molly on a swingset outside Big Bear Lake</div>
 </figure>
 
 But since the start of this blog, our circus of little black dogs has ballooned to 3. Molly was picked up from LAX in early 2013; less than 3 years later, Cindy was picking up little Coby from SFO.
 
 <figure>
 	<img src="{{ site.url }}/img/page/about/DSC_1010.jpg" alt="Coby and Cindy">
-	<figcaption>Cindy and Coby at the Hoover Dam</figcaption>
+	<div class="figcaption">Cindy and Coby at the Hoover Dam</div>
 </figure>
 
 Molly and Coby have had an interesting relationship over the years that's involved fewer than 100 stitches.
 
 <figure>
 	<img src="{{ site.url }}/img/page/about/20160902_192447.jpg" alt="Coby and Molly and Cindy">
-	<figcaption>Cindy with Molly and Coby at UCLA</figcaption>
+	<div class="figcaption">Cindy with Molly and Coby at UCLA</div>
 </figure>
 
 Flash forward another 2 years and we had the bright idea that, sure, we can handle a third dog. Enter: Linny. Yet another little black dog. 
 
 <figure>
-	<img src="{{ site.url }}/img/page/about/IMG_1033.jpg" alt="Linny">
-	<figcaption>Linny in Fremont</figcaption>
+	<img src="{{ site.url }}/img/page/about/IMG_1033.JPG" alt="Linny">
+	<div class="figcaption">Linny in Fremont</div>
 </figure>
 
 Now with these three little monsters, there's certainly no quiet evenings.
 
 <figure>
 	<img src="{{ site.url }}/img/page/about/20181121_191546.jpg" alt="Linny, Coby, Molly, Cindy">
-	<figcaption>Cindy and the three monsters preparing for Thanksgiving</figcaption>
+	<div class="figcaption">Cindy and the three monsters preparing for Thanksgiving</div>
 </figure>
