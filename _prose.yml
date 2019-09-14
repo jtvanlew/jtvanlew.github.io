@@ -1,0 +1,88 @@
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://jtvanlew.github.io/'
+  relativeLinks: 'http://jtvanlew.github.io/links.jsonp'
+  media: 'images'
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "true"
+      - name: "layout"
+        field:
+          element: "hidden"
+          label: "Layout"
+          value: "post"
+      - name: "title"
+        field:
+          label: "Title"
+          element: "text"
+          value: "An Awesome Headline!"
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
+          placeholder: "Enter Post Description"
+      - name: "headline"
+        field:
+          element: "text"
+          label: "headline"
+          placeholder: "Enter Post Headline"
+      - name: "modified"
+        field:
+          element: "text"
+          label: "Has this page been modified?"
+          placeholder: "YYYY-MM-DD"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add categories"
+          placeholder: "Choose categories"
+          value: personal
+          options:
+            - name: "Personal"
+              value: personal
+            - name: "Engineering"
+              value: engineering
+            - name: "Bicycling"
+              value: bicycling
+            - name: "Coffee"
+              value: coffee
+            - name: "Travel"
+              value: travel
+            - name: "Programming"
+              value: programming
+            - name: "Brewing"
+              value: brewing
+            - name: "Chinese"
+              value: chinese
+            - name: "KCRW"
+              value: kcrw
+          alterable: true
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          placeholder: "Enter tags, separated by spaces"
+      - name: "imagefeature"
+        field:
+          element: "text"
+          label: "Featured Image"
+          placeholder: "somefile.jpg"
+      - name: "mathjax"
+        field:
+          element: "checkbox"
+          label: "MathJax"
+          value: false
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Allow comments"
+          value: true
+      - name: "share"
+        field:
+          element: "checkbox"
+          label: "Allow shoaring"
+          value: true

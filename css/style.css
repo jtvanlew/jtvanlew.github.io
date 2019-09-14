@@ -11,7 +11,10 @@ Version: 1.5.1
 /* ------------------------------------------------------------------
 General Styles
 ------------------------------------------------------------------- */
-
+.figcaption {
+	font-size: 0.8em;
+	font-style: italic;
+}
 html {
 	overflow-y: scroll;
 	overflow-x: hidden;
