@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="english">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>jonvanlew.com</title>
+
+
+
+        <!-- Bootstrap Core CSS -->
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/theme/css/clean-blog.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+
+        <meta name="tags" contents="flickr" />
+        <meta name="tags" contents="photography" />
+        <meta name="tags" contents="python" />
+        <meta name="tags" contents="flickr uploadr" />
+
+
+			<meta property="og:locale" content="english">
+		<meta property="og:site_name" content="jonvanlew.com">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/2016-01-02-cleaning-up-flickr-s-asinine-auto-uploaded-albums.html">
+	<meta property="og:title" content="Cleaning up Flickr's Asinine Auto-uploaded Albums">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/">
+	<meta property="article:published_time" content="2016-01-02 00:00:00-08:00">
+</head>
+
+<body>    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">jonvanlew.com</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                            <li><a href="/category/bike-camping.html">Bike Camping</a></li>
+                            <li><a href="/category/bikes.html">bikes</a></li>
+                            <li><a href="/category/blog.html">blog</a></li>
+                            <li><a href="/category/kcrw.html">kcrw</a></li>
+                            <li class="active"><a href="/category/programming.html">Programming</a></li>
+                            <li><a href="/category/travel.html">travel</a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-md-10 col-md-offset-1">
+    <!-- Page Header -->
+    <div class="post-heading">
+        <h1>Cleaning up Flickr's Asinine Auto-uploaded Albums</h1>
+        <span class="meta">Posted by
+                <a href="/author/jon.html">Jon</a>
+                on Sat 02 January 2016
+        </span>
+        
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="container row">
+    <!-- Post Content -->
+    <article>
+        <!--  -->
+        <h2>First of all... why??</h2>
+<p>If you Google around for things like "mass delete flickr album", you'll find a lot of people on personal blogs and the flickr forum complaining about Flickr's desktop auto-uploader creating a friggin massive amount of albums. The uploader creates an album for every single folder it finds for your photos -- and since any intelligent photo management software will sort photos into subfolders based on date -- you can see where this will get out of hand.</p>
+<p>The issue is that Flickr, via either their website or their auto-uploader software, provides NO WAY of deleting the albums in any helpful way. On the <a href="https://www.flickr.com/help/forum/en-us/72157656351714341/">flickr forums</a> you'll see that the acceptable solution is to just accept that you gotta go one-by-one on their site and just <em>delete 5 or 10 at a time</em>. That's ridiculous. Why does Flickr not provide the ability to bulk/mass delete albums??</p>
+<h2>My solution: Flickr API + Python</h2>
+<p>So I tried deleting the albums manually for all of 5 minutes before I threw in the towel. I went instead to Flickr's API site and found you do have the ability to delete albums (photosets in API vernacular) from this interface. Luckily, there are also people who've made the api into <a href="https://github.com/alexis-mignon/python-flickr-api">a Python module</a>. Here I'll walk through how I used the <code>python_api</code> to delete most of my auto-generated albums.</p>
+<h3>Step 1: Get Flickr API key</h3>
+<p>Go to the flickr site and apply for a key: https://www.flickr.com/services/apps/create/apply/</p>
+<p>You'll end up with flickr giving you an api key and api secret. </p>
+<h3>Step 2: Set up flickr_api</h3>
+<p>You can use pip to install flickr_api. Once installed, you've got to authenticate with flickr in Python. Specifically, we need to tell flickr that this script is going to have the permissions to delete -- so we can delete the photosets, obvs.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">flickr_api</span>
+<span class="n">api_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;key_from_flickr&#39;</span>
+<span class="n">api_secret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;secret_from_flickr&#39;</span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flickr_api</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">AuthHandler</span><span class="p">()</span><span class="w"> </span><span class="c1">#creates the AuthHandler object</span>
+<span class="n">perms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;delete&quot;</span><span class="w"> </span><span class="c1"># set the required permissions</span>
+<span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">.</span><span class="n">get_authorization_url</span><span class="p">(</span><span class="n">perms</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
+
+<p>then go to the url printed out and flickr will ask if you want to authorize. you OK it and then it'll give you some xml data in your browser. Find this line: <code>&lt;oauth_verifier&gt;my_auth_code&lt;/oauth_verifier&gt;</code> (where obviously my_auth_code is a set of random letters and numbers...) and then we can auth with flickr and save the authentication so we don't need to do the above again...</p>
+<div class="highlight"><pre><span></span><code>a.set_verifier(&quot;my_auth_code&quot;)
+a.save(&#39;authed_flickr&#39;)
+</code></pre></div>
+
+<h3>Step 3: Load auth'ed file and get those albums!</h3>
+<p>Now that the file is saved the only code we need to run in our script from now on is</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">flickr_api</span>
+<span class="n">flickr_api</span><span class="o">.</span><span class="n">set_auth_handler</span><span class="p">(</span><span class="s1">&#39;authed_flickr&#39;</span><span class="p">)</span>
+<span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flickr_api</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+</code></pre></div>
+
+<p>where the last line just gives us user for the case when we've already authenticated (which we have, with the 'authed_flickr' file). We can then get a whole list of our photosets with</p>
+<div class="highlight"><pre><span></span><code>photosets = user.getPhotosets()
+</code></pre></div>
+
+<p>If you check the type of photosets you'll see its a <code>flickr_api.objects.FlickrList</code>. So you can iterate through all the photosets and print them out with a simple</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="nv">photoset</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">photosets</span>:
+<span class="w">    </span><span class="nv">print</span><span class="ss">(</span><span class="nv">photoset</span>[<span class="s1">&#39;title&#39;</span>]<span class="ss">)</span>
+</code></pre></div>
+
+<h3>Step 4: Figure out how to delete your garbage albums</h3>
+<p>At this point, you need to come up with your own clever solution for deleting the albums you no longer want. For me, I was lucky in that 989 of the 994 albums I didn't want were all in the standard expression of "yyyy-mm-dd". So all I needed to do was a crude loop through years and then delete any album whose name begins with that. In other words, I did this:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">for</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="w"> </span><span class="mi">2016</span><span class="p">):</span>
+<span class="w">    </span><span class="n">photosets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user</span><span class="o">.</span><span class="n">getPhotosets</span><span class="p">()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">photoset</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">photosets</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">photoset</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">-&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<span class="w">            </span><span class="n">photoset</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;deleting photoset &#39;</span><span class="o">+</span><span class="n">photoset</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<p>This may not have been the most elegant loop through all my photosets but it worked. After only a few minutes, 99.5% of the damned albums had been deleted. Any album that didn't fit that format was then easily deleted one-by-one via it's name with a similar loop.</p>
+<h3>Step 5: Curse Flickr again for making this so annoying</h3>
+<p>For real. WTF Flickr? Why do we have to go through this just to delete a bunch of albums? I actually hadn't logged into flickr for months because it was so annoying that all those albums existed and were clogging up my feed. I spent a few days looking for alternatives to flickr too. I just really really didn't want to delete those albums by hand. I'm sure I'm not the only one who had the same idea -- how many actually did jump ship? The flickr uploader was released in like... summer of 2015 (I think??) and it's been bothering everyone since then. Why couldn't they release a fix in the last 6 months? I just spent an hour and had at least a workable, janky solution and I'm not even a good coder. Yahoo -- you're losing business because of your shitty uploader and flickr interface! Do something about this!! </p>
+
+        
+
+        <!--  -->
+    </article>
+
+
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">Blog powered by <a href="http://getpelican.com">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/theme/js/clean-blog.min.js"></script>
+
+
+</body>
+
+</html>
