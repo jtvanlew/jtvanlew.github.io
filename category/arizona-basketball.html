@@ -8,8 +8,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>jonvanlew.com - Articles in the blog category</title>
+        <title>jonvanlew.com - Articles in the Arizona Basketball category</title>
 
+            <link rel="stylesheet" href="/theme/css/magnific-popup.css">
 
 
         <!-- Bootstrap Core CSS -->
@@ -47,23 +48,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="/">jonvanlew.com</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-
-                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
@@ -79,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Articles in the blog category</h1>
+                        <h1>Articles in the Arizona Basketball category</h1>
                     </div>
                 </div>
             </div>
@@ -94,34 +80,30 @@
         <div class="container row">
 
     <div class="row">
-            
             <div class="col-sm-4 col-xs-12">
                 <div class="post-preview">
                     <div class="row">
-                        <a href="/2019-09-05-eightyninenine-update.html"><img class="img-responsive" src="/images/KCRW_Logo_White.png"/></a>
+                        <a href="/2023-12-29-End-of-AZ-bball-Pac-12.html"><img class="img-responsive" src="/photos\2023/12-29-azbball/img_1006t.jpg"/></a>
                     </div>
                     <div class="row">
                     <ul class="list-unstyled">
-                        <li><time datetime="2019-09-05T00:00:00-07:00"> Thu 05 September 2019 </time></li>
-                        <li><a href="/category/blog.html"><small>blog</small></a></li>
+                        <li><time datetime="2023-05-13T00:00:00-07:00"> Sat 13 May 2023 </time></li>
+                        <li><a href="/category/arizona-basketball.html"><small>Arizona Basketball</small></a></li>
                     </ul>
                     
-                        <a href="/2019-09-05-eightyninenine-update.html" rel="bookmark" title="Permalink to Eighty Nine Nine.com UPDATE!">
+                        <a href="/2023-12-29-End-of-AZ-bball-Pac-12.html" rel="bookmark" title="Permalink to The Death of Pac-12 Arizona Bball in the Bay">
                             <h3 class="post-title">
-                                Eighty Nine Nine.com UPDATE!
+                                The Death of Pac-12 Arizona Bball in the Bay
                             </h3>
                         </a>
-                        <div class="summary">D3 & speed upgrades to Eightyninenine.com After 3 or 4 years of leaving it to its own devices, I finally had the time to do some major fixes to eightyninenine.com. Important changes: replaced all the highcharts.js-based plots with my own d3.js versions. artist/song bar charts have …<a href="/2019-09-05-eightyninenine-update.html"> Read more ...</a>
+                        <div class="summary">Small gallery of the team during games in Berkeley and Stanford. As this was the last season of Arizona in the Pac-12, I decided to treat myself to as good of seats as I could get for both venues. For the Stanford game this meant second row behind the team …<a href="/2023-12-29-End-of-AZ-bball-Pac-12.html"> Read more ...</a>
                         </div>
-                    </div>
-                    <div>
-                        <p></p>
                     </div>
                 </div>
             </div>
             
     </div>
-    <hr>
+    
     <div class="row">
     <!-- Pager -->
 
@@ -158,6 +140,30 @@
     <script src="/theme/js/clean-blog.min.js"></script>
 
 
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <!-- Magnific Popup core JS file -->
+    <script src="/theme/js/jquery.magnific-popup.js"></script>
+    <script>
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [1,2]
+        },
+        image: {
+            titleSrc: function(item) {
+                if (item.el.attr('caption') && item.el.attr('exif')) {
+                    return (item.el.attr('caption').replace(/\\n/g, '<br />') +
+                        '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
+                }
+            return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
+        } }
+    });
+    </script>
 </body>
 
 </html>
